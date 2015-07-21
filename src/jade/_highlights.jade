@@ -5,35 +5,17 @@ mixin highlights-item(logo, title, metric, current, prediction)
         table.six.columns
           tr
             td
-              table
-                tr
-                  td
-                    if logo == "ga"
-                      img.metric-icon(src="assets/ga-icon.png", width="16", height="16")
-                    if logo == "facebook"
-                      img.metric-icon(src="assets/facebook-icon.png", width="16", height="16")
-                    if logo == "twitter"
-                      img.metric-icon(src="assets/twitter-icon.png", width="16", height="16")
-                    if logo == "shopify"
-                      img.metric-icon(src="assets/shopify-icon.png", width="16", height="16")
-                    if logo == "uphex"
-                      img.metric-icon(src="assets/uphex-icon.png", width="16", height="16")
-                  td.highlight-title
-                    h4.section-subtitle= title
-            td.expander
-      td.wrapper(valign="middle")
-        table.three.columns
-          tr
-            td.highlight-metric
-              span.highlight-number= current
-              span.highlight-label= metric
+              h4.section-subtitle
+                img.metric-icon(src="assets/#{logo}-icon.png", width="16", height="16")
+                = title
             td.expander
       td.wrapper.last
-        table.three.columns
+        table.six.columns
           tr
-            td.text-right
-              span.highlight-number.text-right= prediction
-              span.highlight-label expected
+            td.six.sub-columns
+              strong #{current} #{metric}
+            td.six.sub-columns.last.text-right
+              | #{prediction} expected
             td.expander
 
 table.row
