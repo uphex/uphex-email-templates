@@ -115,9 +115,10 @@ gulp.task('default', ['clean'], function(cb) {
 
 // Start server in preview mode
 gulp.task('preview', ['clean'], function(cb) {
-  runSequence([
+  runSequence(
+    'sass:rel',
+    [
       'jade:rel',
-      'sass:rel',
       'assets',
       'imagemin:rel',
     ],
@@ -127,11 +128,13 @@ gulp.task('preview', ['clean'], function(cb) {
 
 // Build optimized files
 gulp.task('build', function(cb) {
-  runSequence('clean', [
-    'jade:rel',
+  runSequence(
+    'clean',
     'sass:rel',
-    'assets',
-    'cname',
-    'imagemin:rel'
-  ], cb)
+    [
+      'jade:rel',
+      'assets',
+      'cname',
+      'imagemin:rel']
+  , cb)
 });
