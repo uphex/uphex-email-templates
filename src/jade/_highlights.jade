@@ -2,37 +2,38 @@ mixin highlights-item(logo, title, metric, current, prediction)
   table.highlight-row.row
     tr
       td.wrapper
-        table.eight.columns
+        table.six.columns
           tr
             td
               table
                 tr
                   td
                     if logo == "ga"
-                      img.metric-icon(src="assets/ga-icon.png", width="24", height="24")
+                      img.metric-icon(src="assets/ga-icon.png", width="16", height="16")
                     if logo == "facebook"
-                      img.metric-icon(src="assets/facebook-icon.png", width="24", height="24")
+                      img.metric-icon(src="assets/facebook-icon.png", width="16", height="16")
                     if logo == "twitter"
-                      img.metric-icon(src="assets/twitter-icon.png", width="24", height="24")
+                      img.metric-icon(src="assets/twitter-icon.png", width="16", height="16")
                     if logo == "shopify"
-                      img.metric-icon(src="assets/shopify-icon.png", width="24", height="24")
+                      img.metric-icon(src="assets/shopify-icon.png", width="16", height="16")
                     if logo == "uphex"
-                      img.metric-icon(src="assets/uphex-icon.png", width="24", height="24")
+                      img.metric-icon(src="assets/uphex-icon.png", width="16", height="16")
                   td.highlight-title
-                    .highlight-title-first= title
-                    .highlight-title-second= subtitle
+                    h4.section-subtitle= title
+            td.expander
+      td.wrapper(valign="middle")
+        table.three.columns
+          tr
+            td.highlight-metric
+              span.highlight-number= current
+              span.highlight-label= metric
             td.expander
       td.wrapper.last
-        table.four.columns
+        table.three.columns
           tr
-            td
-              table.highlight-numbers(align="right")
-                tr.highlight-metric
-                  td.highlight-number.text-right= current
-                  td.highlight-label= metric
-                tr
-                  td.highlight-number.text-right= prediction
-                  td.highlight-label expected
+            td.text-right
+              span.highlight-number.text-right= prediction
+              span.highlight-label expected
             td.expander
 
 table.row
@@ -42,7 +43,7 @@ table.row
         tr
           td.text-pad
             h3.section-title Highlights
-            p You had several metrics that exceeded expectations last week, including:
+            p.highlight-description You had several metrics that exceeded expectations last week, including:
             +highlights-item(
               "facebook",
               "Borrowed & Blue",
@@ -50,3 +51,11 @@ table.row
               "381",
               "182-321"
             )
+            +highlights-item(
+              "shopify",
+              "Borrowed & Blue",
+              "Revenue",
+              "381",
+              "182-321"
+            )
+          td.expander
