@@ -1,0 +1,81 @@
+.body {
+  background: #eee;
+}
+.section-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.section-subtitle {
+  font-size: 14px;
+  font-weight: bold;
+}
+.metric-column-title {
+  font-size: 16px;
+}
+.metric-icon {
+  margin: 5px 5px 5px 0;
+}
+.metric-title {
+  text-align: center;
+}
+.highlight-title {
+  vertical-align: middle;
+}
+.highlight-title-first {
+  line-height: 18px;
+}
+.highlight-title-second {
+  line-height: 18px;
+}
+.highlight-row,
+.kpi-row,
+.metric-row {
+  margin-bottom: 10px;
+}
+.highlight-row td,
+.kpi-row td,
+.metric-row td {
+  padding-bottom: 0 !important;
+}
+.kpi-icon {
+  margin: 0 5px 0 0;
+}
+.kpi-operand {
+  display: inline-block;
+}
+.kpi-operation {
+  display: inline-block;
+  margin: 0 5px;
+}
+.kpi-total {
+  font-weight: bold;
+}
+.highlight-number {
+  line-height: 18px;
+  padding-right: 5px !important;
+}
+.highlight-label {
+  line-height: 18px;
+}
+.highlight-metric {
+  .highlight-number,
+  .highlight-label {
+    font-weight: bold;
+  }
+}
+.increase {
+  color: #39b54a;
+}  
+.decrease {
+  color: #f34541;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.box {
+  background: white;
+}

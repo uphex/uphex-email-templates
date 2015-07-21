@@ -1,0 +1,24 @@
+doctype strict
+html(xmlns="http://www.w3.org/1999/xhtml")
+  head
+    meta(charset="text/html; charset=utf-8")
+    meta(name="viewport", content="width=device-width")
+    link(rel="stylesheet", href="css/ink.css")
+    link(rel="stylesheet", href="css/index.css")
+  body
+    table.body
+      tr
+        td.center(align="center", valign="top")
+          center
+            include ./jade/_header.jade
+            table.container.box
+              tr
+                td
+                  include ./jade/_highlights.jade
+                  hr
+                  include ./jade/_kpi.jade
+                  hr
+                  include ./jade/_metrics.jade
+                  hr
+                  include ./jade/_more.jade
+            include ./jade/_footer.jade

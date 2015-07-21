@@ -1,0 +1,52 @@
+mixin highlights-item(logo, title, metric, current, prediction)
+  table.highlight-row.row
+    tr
+      td.wrapper
+        table.eight.columns
+          tr
+            td
+              table
+                tr
+                  td
+                    if logo == "ga"
+                      img.metric-icon(src="assets/ga-icon.png", width="24", height="24")
+                    if logo == "facebook"
+                      img.metric-icon(src="assets/facebook-icon.png", width="24", height="24")
+                    if logo == "twitter"
+                      img.metric-icon(src="assets/twitter-icon.png", width="24", height="24")
+                    if logo == "shopify"
+                      img.metric-icon(src="assets/shopify-icon.png", width="24", height="24")
+                    if logo == "uphex"
+                      img.metric-icon(src="assets/uphex-icon.png", width="24", height="24")
+                  td.highlight-title
+                    .highlight-title-first= title
+                    .highlight-title-second= subtitle
+            td.expander
+      td.wrapper.last
+        table.four.columns
+          tr
+            td
+              table.highlight-numbers(align="right")
+                tr.highlight-metric
+                  td.highlight-number.text-right= current
+                  td.highlight-label= metric
+                tr
+                  td.highlight-number.text-right= prediction
+                  td.highlight-label expected
+            td.expander
+
+table.row
+  tr
+    td.wrapper.last
+      table.twelve.columns
+        tr
+          td.text-pad
+            h3.section-title Highlights
+            p You had several metrics that exceeded expectations last week, including:
+            +highlights-item(
+              "facebook",
+              "Borrowed & Blue",
+              "Page Likes",
+              "381",
+              "182-321"
+            )

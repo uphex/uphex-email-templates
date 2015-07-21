@@ -1,0 +1,41 @@
+mixin kpi-item(title, total, diff, type)
+  table.kpi-row.row
+    tr
+      td.wrapper
+        table.four.columns
+          tr
+            td= title
+            td.expander
+      td.wrapper.last
+        table.eight.columns
+          tr
+            td.eight.sub-columns
+              span.kpi-operand
+                img.kpi-icon(src="assets/shopify-icon.png", width="16", height="16")
+                | Revenue
+              span.kpi-operation /
+              span.kpi-operand
+                img.kpi-icon(src="assets/ga-icon.png", width="16", height="16")
+                | Visitors
+            td.four.sub-columns.text-right
+              span.kpi-total= total
+              = " "
+              if type == "increase"
+                span.increase= "+" + diff + "%"
+              else
+                span.increase= "-" + diff + "%"
+            td.expander
+
+table.row
+  tr
+    td.wrapper.last
+      table.twelve.columns
+        tr
+          td.text-pad
+            h3.section-title Key Performance
+            +kpi-item(
+              "Avg. Revenue per Visitor",
+              "$0.25",
+              3.1,
+              "increase"
+            )
