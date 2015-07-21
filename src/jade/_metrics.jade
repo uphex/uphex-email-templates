@@ -1,10 +1,7 @@
 mixin metrics-item(title)
-  table.three.columns
-    tr
-      td.metric
-        .metric-title= title
-        img.metric-chart(src="assets/chart-filler.png", width="145", height="65")
-      td.expander
+  .metric
+    .metric-title= title
+    img.metric-chart(src="assets/chart-filler.png", width="145", height="65")
 
 table.row
   tr
@@ -13,40 +10,59 @@ table.row
         tr
           td.text-pad
             h3.section-title Your Metrics
-            img.kpi-icon(src="assets/ga-icon.png", width="16", height="16")
-            h4.section-subtitle Borrowed & Blue
+            h4.section-subtitle
+              img.kpi-icon(src="assets/ga-icon.png", width="16", height="16")
+              | Borrowed & Blue
             table.metric-row.row
               tr
                 td.wrapper
-                  +metrics-item(
-                    "Ad Clicks"
-                  )
-                td.wrapper
-                  +metrics-item(
-                    "Organic Searches"
-                  )
-                td.wrapper
-                  +metrics-item(
-                    "Visits"
-                  )
+                  table.six.columns
+                    tr
+                      td.six.sub-columns
+                        +metrics-item(
+                          "Ad Clicks"
+                        )
+                      td.six.sub-columns.last
+                        +metrics-item(
+                          "Organic Searches"
+                        )
+                      td.expander
                 td.wrapper.last
-                  +metrics-item(
-                    "Visitors"
-                  )
-            img.kpi-icon(src="assets/facebook-icon.png", width="16", height="16")
-            h4.section-subtitle Borrowed & Blue
+                  table.six.columns
+                    tr
+                      td.six.sub-columns
+                        +metrics-item(
+                          "Visits"
+                        )
+                      td.six.sub-columns.last
+                        +metrics-item(
+                          "Visitors"
+                        )
+                      td.expander
+
+            h4.section-subtitle
+              img.kpi-icon(src="assets/facebook-icon.png", width="16", height="16")
+              | Borrowed & Blue
             table.metric-row.row
               tr
                 td.wrapper
-                  +metrics-item(
-                    "Impressions"
-                  )
-                td.wrapper
-                  +metrics-item(
-                    "Page Links"
-                  )
+                  table.six.columns
+                    tr
+                      td.six.sub-columns
+                        +metrics-item(
+                          "Impressions"
+                        )
+                      td.six.sub-columns.last
+                        +metrics-item(
+                          "Page Links"
+                        )
+                      td.expander
                 td.wrapper.last
-                  +metrics-item(
-                    "Page Visits"
-                  )
-          td.expander
+                  table.six.columns
+                    tr
+                      td.six.sub-columns
+                        +metrics-item(
+                          "Page Visits"
+                        )
+                      td.six.sub-columns.last
+                      td.expander
