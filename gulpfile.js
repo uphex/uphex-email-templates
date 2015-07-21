@@ -73,7 +73,10 @@ gulp.task('jade:dev', function() {
     .pipe(plumber())
     .pipe(jade())
     .pipe(gulp.dest(paths.release))
-    .pipe(inlineCss())
+    .pipe(inlineCss({
+      removeStyleTags: false,
+      preserveMediaQueries: true
+    }))
     .pipe(gulp.dest(paths.release))
     .pipe(connect.reload());
 });
@@ -82,7 +85,10 @@ gulp.task('jade:rel', function() {
   return gulp.src([paths.jade, '!**/_*.jade'])
     .pipe(jade())
     .pipe(gulp.dest(paths.release))
-    .pipe(inlineCss())
+    .pipe(inlineCss({
+      removeStyleTags: false,
+      preserveMediaQueries: true
+    }))
     .pipe(gulp.dest(paths.release))
 });
 
