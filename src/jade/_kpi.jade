@@ -2,12 +2,13 @@ mixin kpi-item(title, total, diff, type)
   table.kpi-row.row
     tr
       td.wrapper
-        table.four.columns
+        table.five.columns
           tr
-            td= title
+            td
+              h4.section-subtitle #{title}
             td.expander
       td.wrapper.last
-        table.eight.columns
+        table.seven.columns
           tr
             td.eight.sub-columns
               span.kpi-operand
