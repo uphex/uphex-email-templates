@@ -44,15 +44,12 @@ hr {
 .highlight-title-second {
   line-height: 18px;
 }
-.highlight-row,
-.kpi-row,
 .metric-row {
-  margin-bottom: 10px;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
 }
-.highlight-row td,
-.kpi-row td,
-.metric-row td {
-  padding-bottom: 0 !important;
+.metrics-section .section-title {
+  margin-bottom: 20px;
 }
 .kpi-icon {
   margin: 0 5px 0 0;
