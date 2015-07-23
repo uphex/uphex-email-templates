@@ -63,6 +63,11 @@ hr {
 .metrics-section .section-title {
   margin-bottom: 20px;
 }
+.kpi-row {
+  .last {
+    margin-bottom: 10px;
+  }
+}
 .kpi-icon {
   margin: 0 5px 0 0;
 }
@@ -76,6 +81,11 @@ hr {
 }
 .kpi-total {
   font-weight: bold;
+}
+.highlight-row {
+  .last {
+    margin-bottom: 10px;
+  }
 }
 .highlight-number {
   line-height: 18px;
