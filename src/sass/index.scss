@@ -1,6 +1,18 @@
 .body {
   background: #eee;
 }
+.header-column {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  
+  h6 {
+    font-size: 18px;
+  }
+  
+  p {
+    font-size: 14px;
+  }
+}
 .section-title {
   margin-bottom: 10px;
   font-size: 18px;
