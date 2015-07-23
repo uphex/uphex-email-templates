@@ -1,6 +1,11 @@
 .body {
   background: #f8f8f8;
 }
+hr {
+  background-color: #f8f8f8 !important;
+  color: #f8f8f8 !important;
+  height: 2px;
+}
 .header-column {
   padding-top: 10px !important;
   padding-bottom: 10px !important;
@@ -58,6 +63,7 @@
 .kpi-operation {
   display: inline-block;
   margin: 0 5px;
+  font-weight: bold;
 }
 .kpi-total {
   font-weight: bold;
