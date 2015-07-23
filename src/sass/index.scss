@@ -8,7 +8,7 @@
   h6 {
     font-size: 18px;
   }
-  
+
   p {
     font-size: 14px;
   }
@@ -16,14 +16,9 @@
 .section-title {
   margin-bottom: 10px;
   font-size: 18px;
-  font-weight: bold;
 }
 .section-subtitle {
   font-size: 14px;
-  font-weight: bold;
-}
-.metric-column-title {
-  font-size: 16px;
 }
 .metric-icon {
   margin: 0 5px 0 0;
@@ -32,6 +27,7 @@
   text-align: center;
 }
 .highlight-description {
+  padding-top: 10px;
   margin-bottom: 0;
 }
 .highlight-title {
@@ -78,9 +74,11 @@
 }
 .increase {
   color: #39b54a;
+  font-weight: bold;
 }  
 .decrease {
   color: #f34541;
+  font-weight: bold;
 }
 .text-center {
   text-align: center;
