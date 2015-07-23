@@ -1,4 +1,4 @@
-mixin kpi-item(title, total, diff, type)
+mixin kpi-item(title, total, diff, type, icon1, icon2, metric1, metric2)
   table.kpi-row.row
     tr
       td.wrapper
@@ -16,15 +16,15 @@ mixin kpi-item(title, total, diff, type)
               if type == "increase"
                 span.increase= "+" + diff + "%"
               else
-                span.increase= "-" + diff + "%"
+                span.decrease= "-" + diff + "%"
             td.eight.sub-columns.last.text-right
               span.kpi-operand
-                img.kpi-icon(src="assets/shopify-icon.png", width="16", height="16")
-                | Revenue
+                img.kpi-icon(src="assets/#{icon1}-icon.png", width="16", height="16")
+                = metric1
               span.kpi-operation /
               span.kpi-operand
-                img.kpi-icon(src="assets/ga-icon.png", width="16", height="16")
-                | Visitors
+                img.kpi-icon(src="assets/#{icon2}-icon.png", width="16", height="16")
+                = metric2
             td.expander
 
 table.row
@@ -38,6 +38,30 @@ table.row
               "Avg. Revenue per Visitor",
               "$0.25",
               3.1,
-              "increase"
+              "increase",
+              "shopify",
+              "ga",
+              "Revenue",
+              "Visitors"
+            )
+            +kpi-item(
+              "Conversion Rate",
+              "21%",
+              0.23,
+              "decrease",
+              "ga",
+              "shopify",
+              "Visitors",
+              "Transactions"
+            )
+            +kpi-item(
+              "Page Visits per Impression",
+              "1.4%",
+              0.3,
+              "increase",
+              "facebook",
+              "facebook",
+              "Page Visits",
+              "Impressions"
             )
           td.expander
