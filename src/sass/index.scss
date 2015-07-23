@@ -30,6 +30,16 @@ a {
 .box {
   background: white;
 }
+.icon-wrap {
+  display: inline-block;
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
+
+  img {
+    margin-top: 2px;
+  }
+}
 
 /*------------------------------------*\
     #HEADER
@@ -116,9 +126,6 @@ a {
     margin-bottom: 10px;
   }
 }
-.kpi-icon {
-  margin: 0 5px 0 0;
-}
 .kpi-operand {
   display: inline-block;
 }
@@ -134,9 +141,6 @@ a {
 /*------------------------------------*\
     #METRIC
 \*------------------------------------*/
-.metric-icon {
-  margin: 0 5px 0 0;
-}
 .metric-title {
   text-align: center;
 }

@@ -19,11 +19,13 @@ mixin kpi-item(title, total, diff, type, icon1, icon2, metric1, metric2)
                 span.decrease= "-" + diff + "%"
             td.eight.sub-columns.last.text-right
               span.kpi-operand
-                img.kpi-icon(src="assets/#{icon1}-icon.png", width="16", height="16")
+                span.icon-wrap
+                  img(src="assets/#{icon1}-icon.png", width="16", height="16")
                 = metric1
               span.kpi-operation /
               span.kpi-operand
-                img.kpi-icon(src="assets/#{icon2}-icon.png", width="16", height="16")
+                span.icon-wrap
+                  img(src="assets/#{icon2}-icon.png", width="16", height="16")
                 = metric2
             td.expander
 

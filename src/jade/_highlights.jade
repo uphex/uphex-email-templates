@@ -6,7 +6,8 @@ mixin highlights-item(logo, title, metric, current, prediction)
           tr
             td
               h4.section-subtitle
-                img.metric-icon(src="assets/#{logo}-icon.png", width="16", height="16")
+                span.icon-wrap
+                  img(src="assets/#{logo}-icon.png", width="16", height="16")
                 = title
             td.expander
       td.wrapper.last
