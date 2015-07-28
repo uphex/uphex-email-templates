@@ -1,4 +1,4 @@
-mixin highlights-item(logo, title, metric, current, prediction)
+mixin highlights-item(logo, title, metric, current, performance, type)
   table.highlight-row.row
     tr
       td.wrapper
@@ -16,7 +16,12 @@ mixin highlights-item(logo, title, metric, current, prediction)
             td.six.sub-columns
               strong #{current} #{metric}
             td.six.sub-columns.last.text-right
-              | #{prediction} expected
+              if type == "increase"
+                span.increase= "+" + performance + " "
+                span vs. predicted
+              else
+                span.decrease= "-" + performance + " "
+                span vs. predicted
             td.expander
 
 table.row.highlights-section
@@ -29,23 +34,17 @@ table.row.highlights-section
             p.highlight-description These metrics exceeded our expectations last week.
             +highlights-item(
               "facebook",
-              "Borrowed & Blue",
+              "Bluth Co.",
               "Page Likes",
-              "381",
-              "182-321"
-            )
-            +highlights-item(
-              "shopify",
-              "Borrowed & Blue",
-              "Revenue",
-              "381",
-              "182-321"
+              "123",
+              "38%",
+              "increase"
             )
             +highlights-item(
               "twitter",
-              "Borrowed & Blue",
-              "Followers",
-              "540",
-              "510-530"
+              "@Bluth",
+              "New Followers",
+              "57",
+              "42%"
             )
           td.expander
