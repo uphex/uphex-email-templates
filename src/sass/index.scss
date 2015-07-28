@@ -1,9 +1,17 @@
+$cBlack: #23272b;
+$cLightGrey: #edf2f7;
+$cWhite: #fff;
+$cBlue: #2781ef;
+$cGreen: #27ef7c;
+$cRed: #f53939;
+$cYellow: #f5e139;
+
 /*------------------------------------*\
     #ROOT, ELEMENTS AND GENERICS
 \*------------------------------------*/
 
 .body {
-  background: #edf2f7;
+  background: $cBlue;
 }
 hr {
   background-color: #edf2f7 !important;
@@ -49,10 +57,12 @@ a {
   padding-bottom: 10px !important;
   
   h6 {
+    color: $cWhite;
     font-size: 18px;
   }
 
   p {
+    color: $cWhite;
     font-size: 14px;
   }
 }
