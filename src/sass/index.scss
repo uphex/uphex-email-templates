@@ -130,6 +130,19 @@ a {
 \*------------------------------------*/
 
 .highlight-row {
+  vertical-align: middle;
+  background: url(../assets/timeline-connect.png) repeat-y 50px;
+
+  &:first-of-type {
+    background: url(../assets/timeline-first.png) repeat-y 50px;
+  }
+  &:last-of-type {
+    background: url(../assets/timeline-last.png) repeat-y 50px;
+  }
+  tr,
+  td {
+    vertical-align: middle;
+  }
   .last {
     margin-bottom: 10px;
   }
