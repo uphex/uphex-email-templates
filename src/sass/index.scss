@@ -134,14 +134,15 @@ a {
   padding-right: 5px !important;
 }
 .highlight-label {
+  display: block;
+  font-size: 14px;
   line-height: 18px;
+}
+.highlight-columnheading {
+  font-size: 14px;
 }
 .highlight-metric {
   font-weight: bold;
-}
-.highlight-description {
-  padding-top: 10px;
-  margin-bottom: 0;
 }
 .highlight-title {
   vertical-align: middle;

@@ -2,26 +2,29 @@ mixin highlights-item(logo, title, metric, current, performance, type)
   table.highlight-row.row
     tr
       td.wrapper
-        table.five.columns
+        table.six.columns
           tr
-            td
+            td.four.sub-columns
+              span.highlight-columnheading Jul 18
+            td.eight.sub-columns
               h4.section-subtitle
                 span.icon-wrap
                   img(src="assets/#{logo}-icon.png", width="16", height="16")
                 = title
             td.expander
       td.wrapper.last
-        table.seven.columns
+        table.six.columns
           tr
-            td.six.sub-columns
-              strong #{current} #{metric}
-            td.six.sub-columns.last.text-right
+            td.six.sub-columns.text-center
+              strong.highlight-label #{current}
+              span.highlight-sublabel #{metric}
+            td.six.sub-columns.last.text-center
               if type == "increase"
-                span.increase= "+" + performance + " "
-                span vs. predicted
+                span.highlight-label.increase= "+" + performance + " "
+                span.highlight-sublabel vs Predicted
               else
-                span.decrease= "-" + performance + " "
-                span vs. predicted
+                span.highlight-label.decrease= "-" + performance + " "
+                span.highlight-sublabel vs Predicted
             td.expander
 
 table.row.highlights-section
@@ -31,7 +34,6 @@ table.row.highlights-section
         tr
           td.text-pad
             h3.section-title Highlights
-            p.highlight-description These metrics exceeded our expectations last week.
             +highlights-item(
               "facebook",
               "Bluth Co.",
