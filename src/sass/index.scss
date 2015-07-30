@@ -132,20 +132,16 @@ a {
 \*------------------------------------*/
 
 .kpi-row {
+  vertical-align: middle;
+
+  tr,
+  td {
+    vertical-align: middle;
+  }
+
   .last {
     margin-bottom: 10px;
   }
-}
-.kpi-operand {
-  display: inline-block;
-}
-.kpi-operation {
-  display: inline-block;
-  margin: 0 5px;
-  font-weight: bold;
-}
-.kpi-total {
-  font-weight: bold;
 }
 
 /*------------------------------------*\

@@ -1,32 +1,32 @@
-mixin kpi-item(title, total, diff, type, icon1, icon2, metric1, metric2)
+mixin kpi-item(title, num1, num2, diff, type)
   table.kpi-row.row
     tr
       td.wrapper
-        table.five.columns
+        table.six.columns
           tr
             td
               h4.section-subtitle #{title}
             td.expander
       td.wrapper.last
-        table.seven.columns
+        table.six.columns
           tr
-            td.four.sub-columns
-              span.kpi-total= total
-              = " "
+            td.six.sub-columns.text-center
+              div
+                strong= num1
+                = " "
+                span last week
+              div
+                strong= num2
+                = " "
+                span prior week
+
+            td.six.sub-columns.last.text-center
               if type == "increase"
                 span.increase= "+" + diff + "%"
               else
                 span.decrease= "-" + diff + "%"
-            td.eight.sub-columns.last.text-right
-              span.kpi-operand
-                span.icon-wrap
-                  img(src="assets/#{icon1}-icon.png", width="16", height="16")
-                = metric1
-              span.kpi-operation /
-              span.kpi-operand
-                span.icon-wrap
-                  img(src="assets/#{icon2}-icon.png", width="16", height="16")
-                = metric2
+              = " "
+              div week-over-week
             td.expander
 
 table.row.kpi-section
@@ -39,31 +39,15 @@ table.row.kpi-section
             +kpi-item(
               "Avg. Revenue per Visitor",
               "$0.25",
-              3.1,
-              "increase",
-              "shopify",
-              "ga",
-              "Revenue",
-              "Visitors"
+              "$0.20",
+              42,
+              "increase"
             )
             +kpi-item(
-              "Conversion Rate",
-              "21%",
-              0.23,
-              "decrease",
-              "ga",
-              "shopify",
-              "Visitors",
-              "Transactions"
-            )
-            +kpi-item(
-              "Page Visits per Impression",
-              "1.4%",
-              0.3,
-              "increase",
-              "facebook",
-              "facebook",
-              "Page Visits",
-              "Impressions"
+              "Fans to Followers Ratio",
+              "3.2×",
+              "3.4×",
+              5.9,
+              "decrease"
             )
           td.expander
