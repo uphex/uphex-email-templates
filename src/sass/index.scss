@@ -40,6 +40,11 @@ a {
   background: white;
   border-bottom: 4px solid #175197;
 }
+.see-all {
+  background: $cLightGrey;
+  color: $cBlue;
+  text-decoration: underline;
+}
 .icon-wrap {
   display: inline-block;
   margin-right: 5px;
