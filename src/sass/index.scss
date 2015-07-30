@@ -37,6 +37,7 @@ a {
 }
 .box {
   background: white;
+  border-bottom: 4px solid #175197;
 }
 .icon-wrap {
   display: inline-block;
@@ -71,11 +72,35 @@ a {
     #FOOTER
 \*------------------------------------*/
 .footer-section {
+  hr {
+    margin: 20px 0;
+    height: 1px;
+    background-color: #4f98f1 !important;
+    color: #4f98f1 !important;
+  }
+  a {
+    color: $cWhite !important;
+    text-decoration: underline;
+  }
   .section-title {
     font-size: 14px;
   }
   .text-center-for-small:first-of-type {
     margin-bottom: 0;
+  }
+}
+.footer-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: $cWhite;
+  text-align: center;
+}
+.footer-text {
+  color: $cWhite;
+  text-align: center;
+
+  &:last-of-type {
+    margin-bottom: 40px;
   }
 }
 .footer-columns {
