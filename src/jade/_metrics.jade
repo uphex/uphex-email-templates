@@ -1,7 +1,6 @@
 mixin metrics-item(title)
-  .metric
-    .metric-title= title
-    img.metric-chart(src="assets/chart-filler.png", width="145", height="65")
+  .metric-title= title
+  img.metric-chart(src="assets/chart-filler.png", width="145", height="65")
 
 table.row.metrics-section
   tr
@@ -12,49 +11,18 @@ table.row.metrics-section
             h3.section-title Your Metrics
             h4.section-subtitle
               span.icon-wrap
-                img(src="assets/ga-icon.png", width="16", height="16")
-              | Borrowed & Blue
-            table.metric-row.row
-              tr
-                td.wrapper
-                  table.six.columns
-                    tr
-                      td.six.sub-columns
-                        +metrics-item(
-                          "Ad Clicks"
-                        )
-                      td.six.sub-columns.last
-                        +metrics-item(
-                          "Organic Searches"
-                        )
-                      td.expander
-                td.wrapper.last
-                  table.six.columns
-                    tr
-                      td.six.sub-columns
-                        +metrics-item(
-                          "Visits"
-                        )
-                      td.six.sub-columns.last
-                        +metrics-item(
-                          "Visitors"
-                        )
-                      td.expander
-
-            h4.section-subtitle
-              span.icon-wrap
                 img(src="assets/facebook-icon.png", width="16", height="16")
-              | Borrowed & Blue
+              | Bluth Co.
             table.metric-row.row
               tr
                 td.wrapper
                   table.six.columns
                     tr
-                      td.six.sub-columns
+                      td.six.sub-columns.center(align="center")
                         +metrics-item(
-                          "Impressions"
+                          "Page Visits"
                         )
-                      td.six.sub-columns.last
+                      td.six.sub-columns.last.center(align="center")
                         +metrics-item(
                           "Page Likes"
                         )
@@ -62,10 +30,43 @@ table.row.metrics-section
                 td.wrapper.last
                   table.six.columns
                     tr
-                      td.six.sub-columns
+                      td.six.sub-columns.center(align="center")
                         +metrics-item(
-                          "Page Visits"
+                          "Impressions"
                         )
-                      td.six.sub-columns.last
+                      td.six.sub-columns.last.center(align="center")
+                        +metrics-item(
+                          "Post Impressions"
+                        )
+                      td.expander
+            h4.section-subtitle
+              span.icon-wrap
+                img(src="assets/ga-icon.png", width="16", height="16")
+              | Bluth Co.
+            table.metric-row.row
+              tr
+                td.wrapper
+                  table.six.columns
+                    tr
+                      td.six.sub-columns.center(align="center")
+                        +metrics-item(
+                          "Ad Clicks"
+                        )
+                      td.six.sub-columns.last.center(align="center")
+                        +metrics-item(
+                          "Organic Searches"
+                        )
+                      td.expander
+                td.wrapper.last
+                  table.six.columns
+                    tr
+                      td.six.sub-columns.center(align="center")
+                        +metrics-item(
+                          "Visits"
+                        )
+                      td.six.sub-columns.last.center(align="center")
+                        +metrics-item(
+                          "Visitors"
+                        )
                       td.expander
             a.see-all(href="#") See all

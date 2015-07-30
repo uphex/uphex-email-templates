@@ -184,6 +184,12 @@ a {
 }
 .metric-title {
   text-align: center;
+  margin-bottom: 10px;
+}
+.metric-chart {
+  display: inline-block;
+  float: none !important;
+  margin-bottom: 20px;
 }
 .metric-row {
   padding-top: 10px !important;
