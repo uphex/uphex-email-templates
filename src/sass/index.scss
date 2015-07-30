@@ -2,6 +2,7 @@ $cBlack: #23272b;
 $cLightGrey: #edf2f7;
 $cWhite: #fff;
 $cBlue: #2781ef;
+$cDarkBlue: #175197;
 $cGreen: #23d26d;
 $cRed: #d73333;
 $cYellow: #f5e139;
@@ -53,19 +54,19 @@ a {
 /*------------------------------------*\
     #HEADER
 \*------------------------------------*/
-.header-column {
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
-  
-  h6 {
-    color: $cWhite;
-    font-size: 18px;
-  }
-
-  p {
-    color: $cWhite;
-    font-size: 14px;
-  }
+.header-row {
+  margin-top: 10px !important;
+  margin-bottom: 20px !important;
+}
+.header-subrow {
+  width: 600px !important;
+  background: $cDarkBlue;
+}
+.header-subheader {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: $cWhite;
 }
 
 /*------------------------------------*\
