@@ -131,14 +131,7 @@ a {
 
 .highlight-row {
   vertical-align: middle;
-  background: url(../assets/timeline-connect.png) repeat-y 50px;
 
-  &:first-of-type {
-    background: url(../assets/timeline-first.png) repeat-y 50px;
-  }
-  &:last-of-type {
-    background: url(../assets/timeline-last.png) repeat-y 50px;
-  }
   tr,
   td {
     vertical-align: middle;
@@ -156,7 +149,11 @@ a {
   font-size: 14px;
   line-height: 18px;
 }
+.highlight-channelname {
+  display: inline-block;
+}
 .highlight-columnheading {
+  margin-right: 10px;
   font-size: 14px;
 }
 .highlight-metric {
