@@ -1,0 +1,437 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    
+    <style>
+      /*  Media Queries */
+      
+      @media only screen and (min-width: 601px) {
+        .highlight-row {
+          background: url(../assets/timeline-connect.png) repeat-y 50px;
+        }
+        .highlight-row:first-of-type {
+          background: url(../assets/timeline-first.png) repeat-y 50px;
+        }
+        .highlight-row:last-of-type {
+          background: url(../assets/timeline-last.png) repeat-y 50px;
+        }
+        .highlight-columnheading {
+          margin-right: 70px !important;
+        }
+      }
+      
+      @media only screen and (max-width: 600px) {
+      
+        table[class="body"] img {
+          width: auto !important;
+          height: auto !important;
+        }
+      
+        table[class="body"] center {
+          min-width: 0 !important;
+        }
+      
+        table[class="body"] .container {
+          width: 95% !important;
+        }
+      
+        table[class="body"] .row {
+          width: 100% !important;
+          display: block !important;
+        }
+      
+        table[class="body"] .wrapper {
+          display: block !important;
+          padding-right: 0 !important;
+        }
+      
+        table[class="body"] .columns,
+        table[class="body"] .column {
+          table-layout: fixed !important;
+          float: none !important;
+          width: 100% !important;
+          padding-right: 0px !important;
+          padding-left: 0px !important;
+          display: block !important;
+        }
+      
+        table[class="body"] .wrapper.first .columns,
+        table[class="body"] .wrapper.first .column {
+          display: table !important;
+        }
+      
+        table[class="body"] table.columns td,
+        table[class="body"] table.column td {
+          width: 100% !important;
+        }
+      
+        table[class="body"] .columns td.one,
+        table[class="body"] .column td.one { width: 8.333333% !important; }
+        table[class="body"] .columns td.two,
+        table[class="body"] .column td.two { width: 16.666666% !important; }
+        table[class="body"] .columns td.three,
+        table[class="body"] .column td.three { width: 25% !important; }
+        table[class="body"] .columns td.four,
+        table[class="body"] .column td.four { width: 33.333333% !important; }
+        table[class="body"] .columns td.five,
+        table[class="body"] .column td.five { width: 41.666666% !important; }
+        table[class="body"] .columns td.six,
+        table[class="body"] .column td.six { width: 50% !important; }
+        table[class="body"] .columns td.seven,
+        table[class="body"] .column td.seven { width: 58.333333% !important; }
+        table[class="body"] .columns td.eight,
+        table[class="body"] .column td.eight { width: 66.666666% !important; }
+        table[class="body"] .columns td.nine,
+        table[class="body"] .column td.nine { width: 75% !important; }
+        table[class="body"] .columns td.ten,
+        table[class="body"] .column td.ten { width: 83.333333% !important; }
+        table[class="body"] .columns td.eleven,
+        table[class="body"] .column td.eleven { width: 91.666666% !important; }
+        table[class="body"] .columns td.twelve,
+        table[class="body"] .column td.twelve { width: 100% !important; }
+      
+        table[class="body"] td.offset-by-one,
+        table[class="body"] td.offset-by-two,
+        table[class="body"] td.offset-by-three,
+        table[class="body"] td.offset-by-four,
+        table[class="body"] td.offset-by-five,
+        table[class="body"] td.offset-by-six,
+        table[class="body"] td.offset-by-seven,
+        table[class="body"] td.offset-by-eight,
+        table[class="body"] td.offset-by-nine,
+        table[class="body"] td.offset-by-ten,
+        table[class="body"] td.offset-by-eleven {
+          padding-left: 0 !important;
+        }
+      
+        table[class="body"] table.columns td.expander {
+          width: 1px !important;
+        }
+      
+        table[class="body"] .right-text-pad,
+        table[class="body"] .text-pad-right {
+          padding-left: 10px !important;
+        }
+      
+        table[class="body"] .left-text-pad,
+        table[class="body"] .text-pad-left {
+          padding-right: 10px !important;
+        }
+      
+        table[class="body"] .hide-for-small,
+        table[class="body"] .show-for-desktop {
+          display: none !important;
+        }
+      
+        table[class="body"] .show-for-small,
+        table[class="body"] .hide-for-desktop {
+          display: inherit !important;
+        }
+      
+        table[class="body"] .text-center-for-small {
+          text-align: center !important;
+        }
+      }
+    </style>
+    
+  </head>
+  <body bgcolor="#2781ef" style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background: #2781ef; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; line-height: 19px; margin: 0; min-width: 100%; padding: 0; text-align: left; width: 100%;">
+    <table bgcolor="#2781ef" class="body" style="border-collapse: collapse; border-spacing: 0; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; height: 100%; line-height: 19px; margin: 0; padding: 0; text-align: left; vertical-align: top; width: 100%;">
+      <tr style="padding: 0; text-align: left; vertical-align: top;">
+        <td align="center" valign="top" class="center" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; text-align: center; vertical-align: top; word-break: break-word;">
+          <center style="min-width: 580px; width: 100%;">
+            <table class="row header-section" style="border-collapse: collapse; border-spacing: 0; padding: 0px; position: relative; text-align: left; vertical-align: top; width: 100%;">
+              <tr style="padding: 0; text-align: left; vertical-align: top;">
+                <td align="center" class="center" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; text-align: center; vertical-align: top; word-break: break-word;">
+                  <center style="min-width: 580px; width: 100%;">
+                    <table class="container header-row" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; margin-bottom: 20px; margin-top: 10px; padding: 0; text-align: inherit; vertical-align: top; width: 580px;">
+                      <tr style="padding: 0; text-align: left; vertical-align: top;">
+                        <td class="wrapper last" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 10px 20px 0px 0px; padding-right: 0px; position: relative; text-align: left; vertical-align: top; word-break: break-word;">
+                          <table class="twelve columns" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: left; vertical-align: top; width: 580px;">
+                            <tr style="padding: 0; text-align: left; vertical-align: top;">
+                              <td style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; text-align: left; vertical-align: top; word-break: break-word;"><img src="assets/logo-white.png" width="128" height="42" style="-ms-interpolation-mode: bicubic; clear: both; display: block; float: left; max-width: 100%; outline: none; text-decoration: none; width: auto;"></td>
+                              <td class="expander" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; text-align: left; vertical-align: top; visibility: hidden; width: 0px; word-break: break-word;"></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </center>
+                </td>
+              </tr>
+              <tr style="padding: 0; text-align: left; vertical-align: top;">
+                <td align="center" class="center" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; text-align: center; vertical-align: top; word-break: break-word;">
+                  <center style="min-width: 580px; width: 100%;">
+                    <table class="container header-subrow" style="background: #175197; border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: inherit; vertical-align: top; width: 600px;">
+                      <tr style="padding: 0; text-align: left; vertical-align: top;">
+                        <td class="wrapper last" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 10px 20px 0px 0px; padding-right: 0px; position: relative; text-align: left; vertical-align: top; word-break: break-word;">
+                          <table class="twelve columns" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: left; vertical-align: top; width: 580px;">
+                            <tr style="padding: 0; text-align: left; vertical-align: top;">
+                              <td style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; text-align: left; vertical-align: top; word-break: break-word;">
+                                <h6 class="header-subheader text-center" style="color: #fff; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 18px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 20px; margin-top: 10px; padding: 0; text-align: center; word-break: normal;">Weekly Digest for Jul 12 to Jul 18</h6>
+                              </td>
+                              <td class="expander" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; text-align: left; vertical-align: top; visibility: hidden; width: 0px; word-break: break-word;"></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </center>
+                </td>
+              </tr>
+            </table>
+            <table class="container box" style="background: white; border-bottom: 4px solid #175197; border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: inherit; vertical-align: top; width: 580px;">
+              <tr style="padding: 0; text-align: left; vertical-align: top;">
+                <td style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; text-align: left; vertical-align: top; word-break: break-word;">
+                  <table class="row highlight-section" style="border-collapse: collapse; border-spacing: 0; display: block; padding: 0px; position: relative; text-align: left; vertical-align: top; width: 100%;">
+                    <tr style="padding: 0; text-align: left; vertical-align: top;">
+                      <td class="wrapper last" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 10px 20px 0px 0px; padding-right: 0px; position: relative; text-align: left; vertical-align: top; word-break: break-word;">
+                        <table class="twelve columns" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: left; vertical-align: top; width: 580px;">
+                          <tr style="padding: 0; text-align: left; vertical-align: top;">
+                            <td class="text-pad" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; padding-left: 10px; padding-right: 10px; text-align: left; vertical-align: top; word-break: break-word;">
+                              <h3 class="section-title" style="color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 18px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left; word-break: normal;">Highlights</h3>
+                                                <table class="highlight-row row" style="border-collapse: collapse; border-spacing: 0; display: block; padding: 0px; position: relative; text-align: left; vertical-align: middle; width: 100%;">
+                                                  <tr style="padding: 0; text-align: left; vertical-align: middle;">
+                                                    <td class="wrapper" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 10px 20px 0px 0px; padding-bottom: 0; position: relative; text-align: left; vertical-align: middle; word-break: break-word;">
+                                                      <table class="six columns" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: left; vertical-align: top; width: 280px;">
+                                                        <tr style="padding: 0; text-align: left; vertical-align: middle;">
+                                                          <td style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; text-align: left; vertical-align: middle; word-break: break-word;"><span class="highlight-columnheading" style="font-size: 14px; margin-right: 10px;">Jul 18</span>
+                                                            <h4 class="section-subtitle highlight-channelname" style="color: #23272b; display: inline-block; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; word-break: normal;"><span class="icon-wrap" style="display: inline-block; height: 16px; margin-right: 5px; width: 16px;"><img src="assets/facebook-icon.png" width="16" height="16" style="-ms-interpolation-mode: bicubic; clear: both; display: block; float: left; margin-top: 2px; max-width: 100%; outline: none; text-decoration: none; width: auto;"></span>Bluth Co.
+                                                            </h4>
+                                                          </td>
+                                                          <td class="expander" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; text-align: left; vertical-align: middle; visibility: hidden; width: 0px; word-break: break-word;"></td>
+                                                        </tr>
+                                                      </table>
+                                                    </td>
+                                                    <td class="wrapper last" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; margin-bottom: 10px; padding: 10px 20px 0px 0px; padding-bottom: 0; padding-right: 0px; position: relative; text-align: left; vertical-align: middle; word-break: break-word;">
+                                                      <table class="six columns" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: left; vertical-align: top; width: 280px;">
+                                                        <tr style="padding: 0; text-align: left; vertical-align: middle;">
+                                                          <td class="six sub-columns text-center" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; min-width: 0px; padding: 0; padding-bottom: 0; padding-right: 10px; text-align: center; vertical-align: middle; width: 50%; word-break: break-word;"><strong class="highlight-label" style="display: block; font-size: 14px; line-height: 18px;">123</strong><span class="highlight-sublabel" style="color: #5e7388; font-size: 13px;">Page Likes</span></td>
+                                                          <td class="six sub-columns last text-center" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; margin-bottom: 10px; min-width: 0px; padding: 0; padding-bottom: 0; padding-right: 0px; text-align: center; vertical-align: middle; width: 50%; word-break: break-word;"><span class="highlight-label increase" style="color: #27ef7c; display: block; font-size: 14px; font-weight: bold; line-height: 18px;">+38% </span><span class="highlight-sublabel" style="color: #5e7388; font-size: 13px;">vs Predicted</span>
+                                                          </td>
+                                                          <td class="expander" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; text-align: left; vertical-align: middle; visibility: hidden; width: 0px; word-break: break-word;"></td>
+                                                        </tr>
+                                                      </table>
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                                <table class="highlight-row row" style="border-collapse: collapse; border-spacing: 0; display: block; padding: 0px; position: relative; text-align: left; vertical-align: middle; width: 100%;">
+                                                  <tr style="padding: 0; text-align: left; vertical-align: middle;">
+                                                    <td class="wrapper" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 10px 20px 0px 0px; padding-bottom: 0; position: relative; text-align: left; vertical-align: middle; word-break: break-word;">
+                                                      <table class="six columns" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: left; vertical-align: top; width: 280px;">
+                                                        <tr style="padding: 0; text-align: left; vertical-align: middle;">
+                                                          <td style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; text-align: left; vertical-align: middle; word-break: break-word;"><span class="highlight-columnheading" style="font-size: 14px; margin-right: 10px;">Jul 18</span>
+                                                            <h4 class="section-subtitle highlight-channelname" style="color: #23272b; display: inline-block; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; word-break: normal;"><span class="icon-wrap" style="display: inline-block; height: 16px; margin-right: 5px; width: 16px;"><img src="assets/twitter-icon.png" width="16" height="16" style="-ms-interpolation-mode: bicubic; clear: both; display: block; float: left; margin-top: 2px; max-width: 100%; outline: none; text-decoration: none; width: auto;"></span>@Bluth
+                                                            </h4>
+                                                          </td>
+                                                          <td class="expander" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; text-align: left; vertical-align: middle; visibility: hidden; width: 0px; word-break: break-word;"></td>
+                                                        </tr>
+                                                      </table>
+                                                    </td>
+                                                    <td class="wrapper last" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; margin-bottom: 10px; padding: 10px 20px 0px 0px; padding-bottom: 0; padding-right: 0px; position: relative; text-align: left; vertical-align: middle; word-break: break-word;">
+                                                      <table class="six columns" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: left; vertical-align: top; width: 280px;">
+                                                        <tr style="padding: 0; text-align: left; vertical-align: middle;">
+                                                          <td class="six sub-columns text-center" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; min-width: 0px; padding: 0; padding-bottom: 0; padding-right: 10px; text-align: center; vertical-align: middle; width: 50%; word-break: break-word;"><strong class="highlight-label" style="display: block; font-size: 14px; line-height: 18px;">57</strong><span class="highlight-sublabel" style="color: #5e7388; font-size: 13px;">New Followers</span></td>
+                                                          <td class="six sub-columns last text-center" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; margin-bottom: 10px; min-width: 0px; padding: 0; padding-bottom: 0; padding-right: 0px; text-align: center; vertical-align: middle; width: 50%; word-break: break-word;"><span class="highlight-label decrease" style="color: #f53939; display: block; font-size: 14px; font-weight: bold; line-height: 18px;">-42% </span><span class="highlight-sublabel" style="color: #5e7388; font-size: 13px;">vs Predicted</span>
+                                                          </td>
+                                                          <td class="expander" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; text-align: left; vertical-align: middle; visibility: hidden; width: 0px; word-break: break-word;"></td>
+                                                        </tr>
+                                                      </table>
+                                                    </td>
+                                                  </tr>
+                                                </table><a href="#" class="see-all" style="background: #edf2f7; color: #2781ef; display: inline-block; margin-top: 20px; text-decoration: underline;">See all</a>
+                            </td>
+                            <td class="expander" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; text-align: left; vertical-align: top; visibility: hidden; width: 0px; word-break: break-word;"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <hr style="background-color: #edf2f7; border: none; color: #edf2f7; height: 2px;">
+                  <table class="row kpi-section" style="border-collapse: collapse; border-spacing: 0; display: block; padding: 0px; position: relative; text-align: left; vertical-align: top; width: 100%;">
+                    <tr style="padding: 0; text-align: left; vertical-align: top;">
+                      <td class="wrapper last" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 10px 20px 0px 0px; padding-right: 0px; position: relative; text-align: left; vertical-align: top; word-break: break-word;">
+                        <table class="twelve columns" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: left; vertical-align: top; width: 580px;">
+                          <tr style="padding: 0; text-align: left; vertical-align: top;">
+                            <td class="text-pad" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; padding-left: 10px; padding-right: 10px; text-align: left; vertical-align: top; word-break: break-word;">
+                              <h3 class="section-title" style="color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 18px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: left; word-break: normal;">Key Performance Indicators</h3>
+                                                <table class="kpi-row row" style="border-collapse: collapse; border-spacing: 0; display: block; padding: 0px; position: relative; text-align: left; vertical-align: middle; width: 100%;">
+                                                  <tr style="padding: 0; text-align: left; vertical-align: middle;">
+                                                    <td class="wrapper" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 10px 20px 0px 0px; padding-bottom: 0; position: relative; text-align: left; vertical-align: middle; word-break: break-word;">
+                                                      <table class="six columns" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: left; vertical-align: top; width: 280px;">
+                                                        <tr style="padding: 0; text-align: left; vertical-align: middle;">
+                                                          <td style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; text-align: left; vertical-align: middle; word-break: break-word;">
+                                                            <h4 class="section-subtitle" style="color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; word-break: normal;">Avg. Revenue per Visitor</h4>
+                                                          </td>
+                                                          <td class="expander" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; text-align: left; vertical-align: middle; visibility: hidden; width: 0px; word-break: break-word;"></td>
+                                                        </tr>
+                                                      </table>
+                                                    </td>
+                                                    <td class="wrapper last" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; margin-bottom: 10px; padding: 10px 20px 0px 0px; padding-bottom: 0; padding-right: 0px; position: relative; text-align: left; vertical-align: middle; word-break: break-word;">
+                                                      <table class="six columns" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: left; vertical-align: top; width: 280px;">
+                                                        <tr style="padding: 0; text-align: left; vertical-align: middle;">
+                                                          <td class="six sub-columns text-center" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; min-width: 0px; padding: 0; padding-bottom: 0; padding-right: 10px; text-align: center; vertical-align: middle; width: 50%; word-break: break-word;">
+                                                            <div><strong>$0.25</strong> <span class="kpi-sublabel" style="color: #5e7388; font-size: 13px;">last week</span>
+                                                            </div>
+                                                            <div><strong>$0.20</strong> <span class="kpi-sublabel" style="color: #5e7388; font-size: 13px;">prior week</span>
+                                                            </div>
+                                                          </td>
+                                                          <td class="six sub-columns last text-center" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; margin-bottom: 10px; min-width: 0px; padding: 0; padding-bottom: 0; padding-right: 0px; text-align: center; vertical-align: middle; width: 50%; word-break: break-word;"><span class="increase" style="color: #27ef7c; font-weight: bold;">+42%</span> 
+                                                            <div class="kpi-sublabel" style="color: #5e7388; font-size: 13px;">week-over-week</div>
+                                                          </td>
+                                                          <td class="expander" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; text-align: left; vertical-align: middle; visibility: hidden; width: 0px; word-break: break-word;"></td>
+                                                        </tr>
+                                                      </table>
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                                <table class="kpi-row row" style="border-collapse: collapse; border-spacing: 0; display: block; padding: 0px; position: relative; text-align: left; vertical-align: middle; width: 100%;">
+                                                  <tr style="padding: 0; text-align: left; vertical-align: middle;">
+                                                    <td class="wrapper" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 10px 20px 0px 0px; padding-bottom: 0; position: relative; text-align: left; vertical-align: middle; word-break: break-word;">
+                                                      <table class="six columns" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: left; vertical-align: top; width: 280px;">
+                                                        <tr style="padding: 0; text-align: left; vertical-align: middle;">
+                                                          <td style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; text-align: left; vertical-align: middle; word-break: break-word;">
+                                                            <h4 class="section-subtitle" style="color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; word-break: normal;">Fans to Followers Ratio</h4>
+                                                          </td>
+                                                          <td class="expander" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; text-align: left; vertical-align: middle; visibility: hidden; width: 0px; word-break: break-word;"></td>
+                                                        </tr>
+                                                      </table>
+                                                    </td>
+                                                    <td class="wrapper last" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; margin-bottom: 10px; padding: 10px 20px 0px 0px; padding-bottom: 0; padding-right: 0px; position: relative; text-align: left; vertical-align: middle; word-break: break-word;">
+                                                      <table class="six columns" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: left; vertical-align: top; width: 280px;">
+                                                        <tr style="padding: 0; text-align: left; vertical-align: middle;">
+                                                          <td class="six sub-columns text-center" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; min-width: 0px; padding: 0; padding-bottom: 0; padding-right: 10px; text-align: center; vertical-align: middle; width: 50%; word-break: break-word;">
+                                                            <div><strong>3.2×</strong> <span class="kpi-sublabel" style="color: #5e7388; font-size: 13px;">last week</span>
+                                                            </div>
+                                                            <div><strong>3.4×</strong> <span class="kpi-sublabel" style="color: #5e7388; font-size: 13px;">prior week</span>
+                                                            </div>
+                                                          </td>
+                                                          <td class="six sub-columns last text-center" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; margin-bottom: 10px; min-width: 0px; padding: 0; padding-bottom: 0; padding-right: 0px; text-align: center; vertical-align: middle; width: 50%; word-break: break-word;"><span class="decrease" style="color: #f53939; font-weight: bold;">-5.9%</span> 
+                                                            <div class="kpi-sublabel" style="color: #5e7388; font-size: 13px;">week-over-week</div>
+                                                          </td>
+                                                          <td class="expander" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; text-align: left; vertical-align: middle; visibility: hidden; width: 0px; word-break: break-word;"></td>
+                                                        </tr>
+                                                      </table>
+                                                    </td>
+                                                  </tr>
+                                                </table><a href="#" class="see-all" style="background: #edf2f7; color: #2781ef; display: inline-block; margin-top: 20px; text-decoration: underline;">See all</a>
+                            </td>
+                            <td class="expander" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; text-align: left; vertical-align: top; visibility: hidden; width: 0px; word-break: break-word;"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <hr style="background-color: #edf2f7; border: none; color: #edf2f7; height: 2px;">
+                  <table class="row metrics-section" style="border-collapse: collapse; border-spacing: 0; display: block; padding: 0px; padding-bottom: 20px; position: relative; text-align: left; vertical-align: top; width: 100%;">
+                    <tr style="padding: 0; text-align: left; vertical-align: top;">
+                      <td class="wrapper last" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 10px 20px 0px 0px; padding-right: 0px; position: relative; text-align: left; vertical-align: top; word-break: break-word;">
+                        <table class="twelve columns" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: left; vertical-align: top; width: 580px;">
+                          <tr style="padding: 0; text-align: left; vertical-align: top;">
+                            <td class="text-pad" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; padding-left: 10px; padding-right: 10px; text-align: left; vertical-align: top; word-break: break-word;">
+                              <h3 class="section-title" style="color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 18px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 20px; padding: 0; text-align: left; word-break: normal;">Your Metrics</h3>
+                              <h4 class="section-subtitle" style="color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; word-break: normal;"><span class="icon-wrap" style="display: inline-block; height: 16px; margin-right: 5px; width: 16px;"><img src="assets/facebook-icon.png" width="16" height="16" style="-ms-interpolation-mode: bicubic; clear: both; display: block; float: left; margin-top: 2px; max-width: 100%; outline: none; text-decoration: none; width: auto;"></span>Bluth Co.</h4>
+                              <table class="metric-row row" style="border-collapse: collapse; border-spacing: 0; display: block; padding: 0px; padding-bottom: 10px; padding-top: 10px; position: relative; text-align: left; vertical-align: top; width: 100%;">
+                                <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                  <td class="wrapper" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 10px 20px 0px 0px; padding-bottom: 0; position: relative; text-align: left; vertical-align: top; word-break: break-word;">
+                                    <table class="six columns" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: left; vertical-align: top; width: 280px;">
+                                      <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                        <td align="center" class="six sub-columns center" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; min-width: 0px; padding: 0; padding-bottom: 0; padding-right: 10px; text-align: center; vertical-align: top; width: 50%; word-break: break-word;">
+                                                            <div class="metric-title" style="margin-bottom: 10px; text-align: center;">Page Visits</div><img src="assets/chart-filler.png" width="145" height="65" class="metric-chart" style="-ms-interpolation-mode: bicubic; clear: both; display: inline-block; float: none; margin-bottom: 20px; max-width: 100%; outline: none; text-decoration: none; width: auto;">
+                                        </td>
+                                        <td align="center" class="six sub-columns last center" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; min-width: 0px; padding: 0; padding-bottom: 0; padding-right: 0px; text-align: center; vertical-align: top; width: 50%; word-break: break-word;">
+                                                            <div class="metric-title" style="margin-bottom: 10px; text-align: center;">Page Likes</div><img src="assets/chart-filler.png" width="145" height="65" class="metric-chart" style="-ms-interpolation-mode: bicubic; clear: both; display: inline-block; float: none; margin-bottom: 20px; max-width: 100%; outline: none; text-decoration: none; width: auto;">
+                                        </td>
+                                        <td class="expander" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; text-align: left; vertical-align: top; visibility: hidden; width: 0px; word-break: break-word;"></td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                  <td class="wrapper last" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 10px 20px 0px 0px; padding-bottom: 0; padding-right: 0px; position: relative; text-align: left; vertical-align: top; word-break: break-word;">
+                                    <table class="six columns" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: left; vertical-align: top; width: 280px;">
+                                      <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                        <td align="center" class="six sub-columns center" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; min-width: 0px; padding: 0; padding-bottom: 0; padding-right: 10px; text-align: center; vertical-align: top; width: 50%; word-break: break-word;">
+                                                            <div class="metric-title" style="margin-bottom: 10px; text-align: center;">Impressions</div><img src="assets/chart-filler.png" width="145" height="65" class="metric-chart" style="-ms-interpolation-mode: bicubic; clear: both; display: inline-block; float: none; margin-bottom: 20px; max-width: 100%; outline: none; text-decoration: none; width: auto;">
+                                        </td>
+                                        <td align="center" class="six sub-columns last center" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; min-width: 0px; padding: 0; padding-bottom: 0; padding-right: 0px; text-align: center; vertical-align: top; width: 50%; word-break: break-word;">
+                                                            <div class="metric-title" style="margin-bottom: 10px; text-align: center;">Post Impressions</div><img src="assets/chart-filler.png" width="145" height="65" class="metric-chart" style="-ms-interpolation-mode: bicubic; clear: both; display: inline-block; float: none; margin-bottom: 20px; max-width: 100%; outline: none; text-decoration: none; width: auto;">
+                                        </td>
+                                        <td class="expander" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; text-align: left; vertical-align: top; visibility: hidden; width: 0px; word-break: break-word;"></td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                              <h4 class="section-subtitle" style="color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; line-height: 1.3; margin: 0; padding: 0; text-align: left; word-break: normal;"><span class="icon-wrap" style="display: inline-block; height: 16px; margin-right: 5px; width: 16px;"><img src="assets/ga-icon.png" width="16" height="16" style="-ms-interpolation-mode: bicubic; clear: both; display: block; float: left; margin-top: 2px; max-width: 100%; outline: none; text-decoration: none; width: auto;"></span>Bluth Co.</h4>
+                              <table class="metric-row row" style="border-collapse: collapse; border-spacing: 0; display: block; padding: 0px; padding-bottom: 10px; padding-top: 10px; position: relative; text-align: left; vertical-align: top; width: 100%;">
+                                <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                  <td class="wrapper" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 10px 20px 0px 0px; padding-bottom: 0; position: relative; text-align: left; vertical-align: top; word-break: break-word;">
+                                    <table class="six columns" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: left; vertical-align: top; width: 280px;">
+                                      <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                        <td align="center" class="six sub-columns center" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; min-width: 0px; padding: 0; padding-bottom: 0; padding-right: 10px; text-align: center; vertical-align: top; width: 50%; word-break: break-word;">
+                                                            <div class="metric-title" style="margin-bottom: 10px; text-align: center;">Ad Clicks</div><img src="assets/chart-filler.png" width="145" height="65" class="metric-chart" style="-ms-interpolation-mode: bicubic; clear: both; display: inline-block; float: none; margin-bottom: 20px; max-width: 100%; outline: none; text-decoration: none; width: auto;">
+                                        </td>
+                                        <td align="center" class="six sub-columns last center" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; min-width: 0px; padding: 0; padding-bottom: 0; padding-right: 0px; text-align: center; vertical-align: top; width: 50%; word-break: break-word;">
+                                                            <div class="metric-title" style="margin-bottom: 10px; text-align: center;">Organic Searches</div><img src="assets/chart-filler.png" width="145" height="65" class="metric-chart" style="-ms-interpolation-mode: bicubic; clear: both; display: inline-block; float: none; margin-bottom: 20px; max-width: 100%; outline: none; text-decoration: none; width: auto;">
+                                        </td>
+                                        <td class="expander" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; text-align: left; vertical-align: top; visibility: hidden; width: 0px; word-break: break-word;"></td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                  <td class="wrapper last" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 10px 20px 0px 0px; padding-bottom: 0; padding-right: 0px; position: relative; text-align: left; vertical-align: top; word-break: break-word;">
+                                    <table class="six columns" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: left; vertical-align: top; width: 280px;">
+                                      <tr style="padding: 0; text-align: left; vertical-align: top;">
+                                        <td align="center" class="six sub-columns center" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; min-width: 0px; padding: 0; padding-bottom: 0; padding-right: 10px; text-align: center; vertical-align: top; width: 50%; word-break: break-word;">
+                                                            <div class="metric-title" style="margin-bottom: 10px; text-align: center;">Visits</div><img src="assets/chart-filler.png" width="145" height="65" class="metric-chart" style="-ms-interpolation-mode: bicubic; clear: both; display: inline-block; float: none; margin-bottom: 20px; max-width: 100%; outline: none; text-decoration: none; width: auto;">
+                                        </td>
+                                        <td align="center" class="six sub-columns last center" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; min-width: 0px; padding: 0; padding-bottom: 0; padding-right: 0px; text-align: center; vertical-align: top; width: 50%; word-break: break-word;">
+                                                            <div class="metric-title" style="margin-bottom: 10px; text-align: center;">Visitors</div><img src="assets/chart-filler.png" width="145" height="65" class="metric-chart" style="-ms-interpolation-mode: bicubic; clear: both; display: inline-block; float: none; margin-bottom: 20px; max-width: 100%; outline: none; text-decoration: none; width: auto;">
+                                        </td>
+                                        <td class="expander" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; text-align: left; vertical-align: top; visibility: hidden; width: 0px; word-break: break-word;"></td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table><a href="#" class="see-all" style="background: #edf2f7; color: #2781ef; text-decoration: underline;">See all</a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <table class="row footer-section" style="border-collapse: collapse; border-spacing: 0; padding: 0px; position: relative; text-align: left; vertical-align: top; width: 100%;">
+              <tr style="padding: 0; text-align: left; vertical-align: top;">
+                <td align="center" class="center" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; text-align: center; vertical-align: top; word-break: break-word;">
+                  <center style="min-width: 580px; width: 100%;">
+                    <table class="container" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; padding: 0; text-align: inherit; vertical-align: top; width: 580px;">
+                      <tr style="padding: 0; text-align: left; vertical-align: top;">
+                        <td class="wrapper last center" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 10px 20px 0px 0px; padding-right: 0px; position: relative; text-align: center; vertical-align: top; word-break: break-word;">
+                          <table class="ten columns footer-columns" style="border-collapse: collapse; border-spacing: 0; margin: 0 auto; margin-bottom: 10px; margin-top: 10px; padding: 0; text-align: left; vertical-align: top; width: 480px;">
+                            <tr style="padding: 0; text-align: left; vertical-align: top;">
+                              <td class="text-pad" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; padding-left: 10px; padding-right: 10px; text-align: left; vertical-align: top; word-break: break-word;">
+                                <h3 class="footer-title" style="color: #fff; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 18px; font-weight: normal; line-height: 1.3; margin: 0; margin-bottom: 10px; padding: 0; text-align: center; word-break: normal;">Did you know?</h3>
+                                <p class="footer-text" style="color: #fff; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; line-height: 19px; margin: 0; margin-bottom: 10px; padding: 0; text-align: center;">You can request custom Key Performance Indicators. Just send an email to <a href="mailto:support@uphex.com" style="color: #fff; text-decoration: underline;">support@uphex.com</a>.</p>
+                                <hr style="background-color: #4f98f1; border: none; color: #4f98f1; height: 1px; margin: 20px 0;">
+                                <p class="footer-text text-center-for-small" style="color: #fff; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; line-height: 19px; margin: 0; margin-bottom: 10px; padding: 0; text-align: center;">Powered by <a href="http://uphex.com/" style="color: #fff; text-decoration: underline;">UpHex</a></p>
+                                <p class="footer-text text-center-for-small" style="color: #fff; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; line-height: 19px; margin: 0; margin-bottom: 40px; padding: 0; text-align: center;"><a href="https://twitter.com/uphexco" style="color: #fff; text-decoration: underline;">@uphexco</a> • <a href="mailto:support@uphex.com" style="color: #fff; text-decoration: underline;">Contact Support</a></p>
+                              </td>
+                              <td class="expander" style="-moz-hyphens: auto; -webkit-hyphens: auto; border-collapse: collapse; color: #23272b; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 14px; font-weight: normal; hyphens: auto; line-height: 19px; margin: 0; padding: 0; padding-bottom: 0; text-align: left; vertical-align: top; visibility: hidden; width: 0px; word-break: break-word;"></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </center>
+                </td>
+              </tr>
+            </table>
+          </center>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
