@@ -129,6 +129,12 @@ a {
     #HIGHLIGHT
 \*------------------------------------*/
 
+.highlight-section {
+  .see-all {
+    display: inline-block;
+    margin-top: 20px;
+  }
+}
 .highlight-row {
   vertical-align: middle;
 
@@ -173,6 +179,12 @@ a {
     #KPI
 \*------------------------------------*/
 
+.kpi-section {
+  .see-all {
+    display: inline-block;
+    margin-top: 20px;
+  }
+}
 .kpi-row {
   vertical-align: middle;
 
