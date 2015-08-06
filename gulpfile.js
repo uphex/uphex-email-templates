@@ -1,15 +1,16 @@
-var pkg         = require('./package.json'),
-    gulp        = require('gulp'),
+var pkg      = require('./package.json'),
+gulp         = require('gulp'),
 
-    connect     = require('gulp-connect'),
-    del         = require('del'),
-    imagemin    = require('gulp-imagemin'),
-    inlineCss   = require('gulp-inline-css'),
-    jade        = require('gulp-jade'),
-    plumber     = require('gulp-plumber'),
-    runSequence = require('run-sequence'),
-    sass        = require('gulp-sass'),
-    sourcemaps  = require('gulp-sourcemaps');
+connect      = require('gulp-connect'),
+del          = require('del'),
+imagemin     = require('gulp-imagemin'),
+inlineCss    = require('gulp-inline-css'),
+jade         = require('gulp-jade'),
+minifyInline = require('gulp-minify-inline'),
+plumber      = require('gulp-plumber'),
+runSequence  = require('run-sequence'),
+sass         = require('gulp-sass'),
+sourcemaps   = require('gulp-sourcemaps');
 
 var paths = {
   assets  : 'src/assets/**/*',
@@ -77,6 +78,7 @@ gulp.task('jade:dev', function() {
       removeStyleTags: false,
       preserveMediaQueries: true
     }))
+    .pipe(minifyInline())
     .pipe(gulp.dest(paths.release))
     .pipe(connect.reload());
 });
@@ -89,6 +91,7 @@ gulp.task('jade:rel', function() {
       removeStyleTags: false,
       preserveMediaQueries: true
     }))
+    .pipe(minifyInline())
     .pipe(gulp.dest(paths.release))
 });
 
@@ -140,7 +143,6 @@ gulp.task('build', function(cb) {
     [
       'jade:rel',
       'assets',
-      'cname',
       'imagemin:rel']
   , cb)
 });

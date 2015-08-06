@@ -16,6 +16,7 @@
     "gulp-imagemin": "^2.2.1",
     "gulp-inline-css": "^2.0.0",
     "gulp-jade": "^1.0.0",
+    "gulp-minify-inline": "^0.1.1",
     "gulp-plumber": "^1.0.0",
     "gulp-sass": "^2.0.4",
     "gulp-sourcemaps": "^1.5.2",
