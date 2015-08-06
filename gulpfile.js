@@ -72,13 +72,14 @@ gulp.task('sass:rel', function() {
 gulp.task('jade:dev', function() {
   return gulp.src([paths.jade, '!**/_*.jade'])
     .pipe(plumber())
-    .pipe(jade())
+    .pipe(jade({
+      pretty: true
+    }))
     .pipe(gulp.dest(paths.release))
     .pipe(inlineCss({
       removeStyleTags: false,
       preserveMediaQueries: true
     }))
-    .pipe(minifyInline())
     .pipe(gulp.dest(paths.release))
     .pipe(connect.reload());
 });
@@ -137,6 +138,18 @@ gulp.task('preview', ['clean'], function(cb) {
 
 // Build optimized files
 gulp.task('build', function(cb) {
+  runSequence(
+    'clean',
+    'sass:rel',
+    [
+      'jade:dev',
+      'assets',
+      'imagemin:rel']
+  , cb)
+});
+
+// Build optimized files
+gulp.task('build-minified', function(cb) {
   runSequence(
     'clean',
     'sass:rel',
