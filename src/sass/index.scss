@@ -1,4 +1,5 @@
 $cBlack: #23272b;
+$cLightBlack: #5e7388;
 $cLightGrey: #edf2f7;
 $cWhite: #fff;
 $cBlue: #2781ef;
@@ -155,6 +156,10 @@ a {
   font-size: 14px;
   line-height: 18px;
 }
+.highlight-sublabel {
+  color: #5e7388;
+  font-size: 13px;
+}
 .highlight-channelname {
   display: inline-block;
 }
@@ -196,6 +201,10 @@ a {
   .last {
     margin-bottom: 10px;
   }
+}
+.kpi-sublabel {
+  color: #5e7388;
+  font-size: 13px;
 }
 
 /*------------------------------------*\

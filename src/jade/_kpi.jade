@@ -14,11 +14,11 @@ mixin kpi-item(title, num1, num2, diff, type)
               div
                 strong= num1
                 = " "
-                span last week
+                span.kpi-sublabel last week
               div
                 strong= num2
                 = " "
-                span prior week
+                span.kpi-sublabel prior week
 
             td.six.sub-columns.last.text-center
               if type == "increase"
@@ -26,7 +26,7 @@ mixin kpi-item(title, num1, num2, diff, type)
               else
                 span.decrease= "-" + diff + "%"
               = " "
-              div week-over-week
+              div.kpi-sublabel week-over-week
             td.expander
 
 table.row.kpi-section
