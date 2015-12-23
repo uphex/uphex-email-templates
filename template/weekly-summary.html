@@ -1,0 +1,504 @@
+<!-- CONTENT TAG START -->
+<table align="center" bgcolor="white" border="0" cellpadding="0" cellspacing="0" style="background: white; border-collapse: collapse; margin: 0 auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px" class="stacked-image-content">
+  <tbody>
+    <tr>
+      <td bgcolor="white" style="background: white; border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200" class="section_container">
+        <div style="background: #fff; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding: 25px 5% 20px" class="color_container">
+          <!-- INSERT CONTENT -->
+
+          <!-- image -->
+          <div align="center" style="font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding-bottom: 20px; padding-top: 10px; text-align: center">
+            <img alt="" src="http://i.imgur.com/aTmUe9V.png" style="-ms-interpolation-mode: bicubic; border-radius: 100%; margin: 0; outline: none; padding: 0; text-decoration: none; width: 75px" title="Image: http://i.imgur.com/aTmUe9V.png">
+          </div>
+
+          <!-- paragraph-->
+          <div align="center" style="color: #343434; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-size: 28px; font-weight: 200; text-align: center">
+            <p style="line-height: 120%; margin: 0em 0">Weekly Digest  ||  {{ event.first_day }} - {{ event.last_day }}</p>
+          </div>
+
+          <!--END CONTENT-->
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- HIGHLIGHTS -->
+
+<table align="center" bgcolor="white" border="0" cellpadding="0" cellspacing="0" style="background: white; border-collapse: collapse; margin: 0 auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px" class="centered-headline">
+  <tbody>
+    <tr>
+      <td bgcolor="white" style="background: white; border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200" class="section_container">
+        <div style="background: #fff; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding: 20px 5%" class="color_container">
+          <!-- INSERT CONTENT -->
+
+          <table style="background-color: transparent !important; border-collapse: collapse; margin: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100% !important" class="section_table">
+            <tbody>
+              <tr>
+                <td align="left" valign="middle" style="border-collapse: collapse; border-spacing: 0; color: #000000; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-size: 15px; font-weight: 200; line-height: 19px; padding: 0; text-align: left; vertical-align: middle; width: 49%" class="left_line">
+                  <hr style="border-bottom-color: #e5e5e5; border-bottom-width: 2px; border-style: none none solid; margin: 0; padding: 0">
+                </td>
+                <td valign="middle" style="border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding-left: 20px; padding-right: 20px; vertical-align: middle; white-space: nowrap; width: 2%">
+                  <p align="center" style="color: #4f4f4f; font-family: helvetica; font-size: 22px; line-height: normal; margin: 0 auto; text-align: center">Highlights</p>
+                </td>
+                <td align="left" valign="middle" style="border-collapse: collapse; border-spacing: 0; color: #000000; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-size: 15px; font-weight: 200; line-height: 19px; padding: 0; text-align: left; vertical-align: middle; width: 49%" class="right_line">
+                  <hr style="border-bottom-color: #e5e5e5; border-bottom-width: 2px; border-style: none none solid; margin: 0; padding: 0">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- END CONTENT -->
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- highlights loop -->
+<table align="center" bgcolor="white" border="0" cellpadding="0" cellspacing="0" style="background: white; border-collapse: collapse; margin: 0 auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px" class="html">
+  <tbody>
+    <tr>
+      <td bgcolor="white" style="background: white; border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200" class="section_container">
+        <table align="center" bgcolor="white" border="0" cellpadding="0" cellspacing="0" style="background: white; border-collapse: collapse; margin: 0 auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px" class="table-row-6-columns">
+          <tbody>
+            <tr>
+              <td bgcolor="white" style="background: white; border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding-bottom: 0px; padding-top: 0px" class="section_container">
+                <div style="background: #fff; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding: 0px 5%" class="color_container">
+                <!-- INSERT CONTENT -->
+
+                  {% for h in event.highlights %}
+                  <!-- table for all highlight rows -->
+
+                    {% for d in h[1] %}
+
+                      <!-- figure out provider icon to use -->
+                      {% case d.provider_name %}
+                        {% when 'facebook' %}
+                          {% assign provider_icon_src = "http://i.imgur.com/aIf8HuH.png" %}
+                        {% when 'twitter' %}
+                          {% assign provider_icon_src = "http://i.imgur.com/WFWG9KC.png" %}
+                        {% when 'google_analytics' %}
+                          {% assign provider_icon_src = "http://i.imgur.com/FUgpBgy.png" %}
+                        {% when 'shopify' %}
+                          {% assign provider_icon_src = "http://i.imgur.com/TFm7nEK.png" %}
+                      {% endcase %}
+
+                      <table style="background-color: transparent !important; border-collapse: collapse; font-size: 14px; margin: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100% !important; table-layout: fixed" class="section_table">
+                        <tbody>
+                          <tr valign="top">
+                            <!-- special row containing only column date -->
+                            <!-- appears once for each highlight row -->
+                            <td rowspan="2" style="border-collapse: collapse; color: #343434; font-family: helvetica; font-weight: 200; padding: 0; white-space: nowrap; width: 21%;" class="wysiwyg-tmp-selected-cell">
+                              {% assign current_date = h[0] | date: "%a %b %d" %}
+                              {% unless current_date == past_date %}
+                              <p style="line-height: 120%; margin: 0em 0">{{ h[0] | date: "%a %b %d" }}</p>
+                              {% endunless %}
+                              {% assign past_date = current_date %}
+                            </td>
+                            <!-- column timeline -->
+                            <td rowspan="2" align="center" style="border-collapse: collapse; color: #343434; font-family: helvetica; font-weight: 200; padding: 0; width: 8%; text-align: center;">
+                              <img alt="" src="http://i.imgur.com/DVYskZi.png" style="-ms-interpolation-mode: bicubic; clear: both; margin: 0; max-width: 100%; outline: none; padding: 0; text-decoration: none; width: auto">
+                            </td>
+
+                            <!-- column provider -->
+                            <td rowspan="2" align="right" style="border-collapse: collapse; color: #343434; font-family: helvetica; font-weight: 200; padding: 0 5px 0 10px; width: 10%">
+                              <img width="16" alt="" src="{{ provider_icon_src }}" height="16" style="-ms-interpolation-mode: bicubic; clear: both; display: block; float: right; margin: 0; max-width: 100%; outline: none; padding: 0; text-decoration: none; width: auto">
+                            </td>
+
+                            <!-- column channel -->
+                            <td colspan="2" style="border-collapse: collapse; color: #343434; font-family: helvetica; font-weight: 200; padding: 0 0 10px; width: 60%">
+                              <p style="line-height: 120%; margin: 0">{{ d.channel_name }}</p>
+                            </td>
+                          </tr>
+                          <!-- second row -->
+                          <tr valign="top">
+                            <!-- column observation -->
+                            <td bgcolor="#ffffff" align="center" style="background: #fff; border-collapse: collapse; font-family: helvetica, Arial, sans-serif; font-weight: 200; width: 30%; padding-bottom: 25px; text-align: center;">
+                              <div style="font-family: helvetica, Arial, sans-serif; font-weight: 200; padding: 0" class="stats_line_padding">
+                              <div style="font-family: helvetica, Arial, sans-serif; font-weight: 200; padding: 0" class="metrics">
+                              <h1 style="color: #353535; font-size: 22px; font-weight: 400; line-height: 125%; margin: 0 0 5px; padding: 0">{{ d.value }}</h1>
+                              <p style="color: #797979; line-height: 100%; margin: 0em 0">{{ d.stream_name }}</p>
+                              </div>
+                              </div>
+                            </td>
+
+                            <!-- column prediction -->
+                            <td bgcolor="#ffffff" align="center" style="background: #fff; border-collapse: collapse; font-family: helvetica, Arial, sans-serif; font-weight: 200; width: 30%; padding-bottom: 25px; text-align: center;">
+                              <div style="font-family: helvetica, Arial, sans-serif; font-weight: 200; padding: 0" class="stats_line_padding">
+                              <div style="font-family: helvetica, Arial, sans-serif; font-weight: 200; padding: 0" class="metrics">
+                              <h1 style="color: #353535; font-size: 22px; font-weight: 400; line-height: 125%; margin: 0 0 5px; padding: 0">{{ d.percent_change }}%</h1>
+                              <p style="color: #797979; line-height: 100%; margin: 0em 0">vs. Predicted</p>
+                              </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                    {% endfor %}
+
+                  {% else %}
+                    Nothing surprising to report this week.
+                  {% endfor %}
+
+                <!--END CONTENT-->
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- end highlights loop -->
+
+<!-- see all -->
+<table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" style="background: #ffffff; border-collapse: collapse; margin: 0 auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px" class="paragraph">
+  <tbody>
+    <tr>
+      <td style="border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding: 20px 5%; width: 600px">
+        <table style="background: transparent; border-collapse: collapse; margin: 0 auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%">
+          <tbody>
+            <tr>
+              <td align="left" style="border-collapse: collapse; color: #2781ef; font-family: helvetica; font-size: 16px; font-weight: 200; text-align: left; width: 540px">
+                <p style="line-height: 120%; margin: 0em 0">
+                  <u>
+                    <a href="http://app.uphex.com/weekly_summaries" style="color: #317abd; text-decoration: none">See all</a>
+                  </u>
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- KEY PERFORMANCE INDICATORS -->
+
+<table align="center" bgcolor="white" border="0" cellpadding="0" cellspacing="0" style="background: white; border-collapse: collapse; margin: 0 auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px" class="centered-headline">
+  <tbody>
+    <tr>
+      <td bgcolor="white" style="background: white; border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200" class="section_container">
+        <div style="background: #fff; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding: 20px 5%" class="color_container">
+          <!--INSERT CONTENT-->
+          <table bgcolor="transparent !important" style="background-color: transparent !important; border-collapse: collapse; margin: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100% !important" class="section_table"><tbody>
+            <tr>
+              <td align="left" valign="middle" style="border-collapse: collapse; border-spacing: 0; color: #000000; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-size: 15px; font-weight: 200; line-height: 19px; padding: 0; text-align: left; vertical-align: middle; width: 49%" class="left_line">
+                <hr style="border-bottom-color: #e5e5e5; border-bottom-width: 2px; border-style: none none solid; margin: 0; padding: 0">
+              </td>
+              <td valign="middle" style="border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding-left: 20px; padding-right: 20px; vertical-align: middle; white-space: nowrap; width: 2%">
+                <p align="center" style="color: #4f4f4f; font-family: helvetica; font-size: 22px; line-height: normal; margin: 0 auto; text-align: center">Key Performance Indicators</p>
+              </td>
+              <td align="left" valign="middle" style="border-collapse: collapse; border-spacing: 0; color: #000000; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-size: 15px; font-weight: 200; line-height: 19px; padding: 0; text-align: left; vertical-align: middle; width: 49%" class="right_line">
+                <hr style="border-bottom-color: #e5e5e5; border-bottom-width: 2px; border-style: none none solid; margin: 0; padding: 0">
+              </td>
+            </tr>
+          </tbody></table>
+        <!--END CONTENT-->
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+{% for p in event.portfolio_kpis %}
+
+  <table align="center" bgcolor="white" border="0" cellpadding="0" style="background: white; border-collapse: collapse; margin: 0 auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px" class="headline_paragraph_image">
+    <tbody>
+      <tr>
+        <td bgcolor="white" style="background: white; border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200" class="section_container">
+          <div style="background: #fff; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding: 20px 5% 0" class="color_container">
+            <table style="background-color: transparent !important; border-collapse: collapse; margin: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100% !important" class="section_table"><tbody>
+              <tr>
+                <td valign="top" style="border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-size: 30px; font-weight: 200; padding-right: 10px; vertical-align: top; color: #2781ef" class="image_padding">
+                  <p style="line-height: 120%; margin: 0em 0">&#9733;</p>
+                </td>
+                <td valign="middle" style="border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; width: 100%" class="content">
+                  <div style="color: #343434; font-family: helvetica; font-size: 18px; font-weight: 200" class="headline">
+                    <p style="line-height: 120%; margin: 0em 0">{{ p[0] }}</p>
+                  </div>
+                </td>
+              </tr>
+            </tbody></table>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table align="center" bgcolor="white" border="0" cellpadding="0" cellspacing="0" style="background: white; border-collapse: collapse; margin: 0 auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px" class="report-card">
+    <tbody>
+      <tr>
+        <td bgcolor="white" style="background: white; border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200" class="section_container">
+          <div style="background: #fff; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding: 0 20px 20px 5%" class="color_container">
+            <!-- INSERT CONTENT -->
+            {% for k in p[1] %}
+              <table style="background-color: transparent !important; border-collapse: collapse; border: 1px solid #e4e4e4; margin: 20px 0 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100% !important" class="section_table"><tbody>
+                <tr>
+                  <!-- sub-title -->
+                  <td colspan="3" bgcolor="#f1f1f1" style="background: #f1f1f1; border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; width: 100%">
+                    <div style="float: left; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding: 10px" class="title">
+                      <h3 style="color: #353535; font-size: 16px; font-weight: 400; margin: 0; padding: 0">{{ k.name }}</h3>
+                    </div>
+                  </td>
+                </tr>
+                <!-- metrics -->
+                <tr>
+                  <td align="center" bgcolor="#ffffff" style="background: #fff; border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; text-align: center; width: 33%; padding: 10px 0">
+                    <div style="border-right-color: #efefef; border-right-style: solid; border-right-width: 1px; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding: 10px" class="metrics">
+                      <h1 style="color: #353535; font-size: 22px; font-weight: 400; line-height: 125%; margin: 0 0 5px; padding: 0">{{ k.current_value }}</h1>
+                      <p style="color: #797979; line-height: 120%; margin: 0em 0">last week</p>
+                    </div>
+                  </td>
+                  <td align="center" bgcolor="#ffffff" style="background: #fff; border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; text-align: center; width: 33%; padding: 10px 0">
+                    <div style="border-right-color: #efefef; border-right-style: solid; border-right-width: 1px; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding: 10px" class="metrics">
+                      <h1 style="color: #353535; font-size: 22px; font-weight: 400; line-height: 125%; margin: 0 0 5px; padding: 0">{{ k.previous_value }}</h1>
+                      <p style="color: #797979; line-height: 120%; margin: 0em 0">prior week</p>
+                    </div>
+                  </td>
+                  <td align="center" bgcolor="#ffffff" style="background: #fff; border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; text-align: center; width: 33%; padding: 10px 0">
+                    <div style="font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding: 10px" class="metrics">
+                      <h1 style="color: #353535; font-size: 22px; font-weight: 400; line-height: 125%; margin: 0 0 5px; padding: 0">{{ k.percent_change }}%</h1>
+                      <p style="color: #797979; line-height: 120%; margin: 0em 0">weekly change</p>
+                    </div>
+                  </td>
+                </tr>
+              </tbody></table>
+            {% endfor %}
+            <!-- END CONTENT -->
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+{% endfor %}
+
+<table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" style="background: #ffffff; border-collapse: collapse; margin: 0 auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px" class="paragraph">
+  <tbody>
+    <tr>
+      <td style="border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding: 20px 5%; width: 600px">
+        <table bgcolor="transparent" style="background: transparent; border-collapse: collapse; margin: 0 auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%">
+          <tbody>
+            <tr>
+              <td align="left" style="border-collapse: collapse; color: #2781ef; font-family: helvetica; font-size: 16px; font-weight: 200; text-align: left; width: 540px">
+                <p style="line-height: 120%; margin: 0em 0">
+                  <u>
+                    <a href="http://app.uphex.com/weekly_summaries" style="color: #317abd; text-decoration: none">See all</a>
+                  </u>
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- YOUR METRICS -->
+
+<table align="center" bgcolor="white" border="0" cellpadding="0" cellspacing="0" style="background: white; border-collapse: collapse; margin: 0 auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px" class="centered-headline">
+  <tbody>
+    <tr>
+      <td bgcolor="white" style="background: white; border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200" class="section_container">
+        <div style="background: #fff; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding: 20px 5%" class="color_container">
+        <!--INSERT CONTENT-->
+
+          <table style="background-color: transparent !important; border-collapse: collapse; margin: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100% !important" class="section_table">
+            <tbody>
+              <tr>
+                <td align="left" valign="middle" style="border-collapse: collapse; border-spacing: 0; color: #000000; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-size: 15px; font-weight: 200; line-height: 19px; padding: 0; text-align: left; vertical-align: middle; width: 49%" class="left_line">
+                  <hr style="border-bottom-color: #e5e5e5; border-bottom-width: 2px; border-style: none none solid; margin: 0; padding: 0">
+                </td>
+                <td valign="middle" style="border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding-left: 20px; padding-right: 20px; vertical-align: middle; white-space: nowrap; width: 2%">
+                  <p align="center" style="color: #4f4f4f; font-family: helvetica; font-size: 22px; line-height: normal; margin: 0 auto; text-align: center">Your Metrics</p>
+                </td>
+                <td align="left" valign="middle" style="border-collapse: collapse; border-spacing: 0; color: #000000; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-size: 15px; font-weight: 200; line-height: 19px; padding: 0; text-align: left; vertical-align: middle; width: 49%" class="right_line">
+                  <hr style="border-bottom-color: #e5e5e5; border-bottom-width: 2px; border-style: none none solid; margin: 0; padding: 0">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        <!--END CONTENT-->
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+{% for m in event.metrics %}
+
+  <table align="center" bgcolor="white" border="0" cellpadding="0" cellspacing="0" style="background: white; border-collapse: collapse; margin: 0 auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px" class="headline_paragraph_image">
+    <tbody>
+      <tr>
+        <td bgcolor="white" style="background: white; border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200" class="section_container">
+        <!-- BEGIN METRIC SECTION -->
+
+          <table align="center" bgcolor="white" border="0" cellpadding="0" cellspacing="0" style="background: white; border-collapse: collapse; margin: 0 auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px" class="headline_paragraph_image">
+            <tbody>
+              <tr>
+                <td bgcolor="white" style="background: white; border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200" class="section_container">
+                  <div style="background: #fff; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding: 20px 5% 0" class="color_container">
+                  <!-- INSERT CONTENT -->
+
+                    <!-- figure out provider icon to use -->
+
+                    {% case m.provider_name %}
+                      {% when 'facebook' %}
+                        {% assign provider_icon_src = "http://i.imgur.com/aIf8HuH.png" %}
+                      {% when 'twitter' %}
+                        {% assign provider_icon_src = "http://i.imgur.com/WFWG9KC.png" %}
+                      {% when 'google-analytics' %}
+                        {% assign provider_icon_src = "http://i.imgur.com/FUgpBgy.png" %}
+                      {% when 'shopify' %}
+                        {% assign provider_icon_src = "http://i.imgur.com/TFm7nEK.png" %}
+                    {% endcase %}
+
+                    <table style="background-color: transparent !important; border-collapse: collapse; margin: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100% !important" class="section_table">
+                      <tbody>
+                        <tr>
+                          <!-- image -->
+                          <td valign="middle" style="border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding-right: 10px; vertical-align: middle" class="image_padding">
+                            <img alt="" width="28" height="28" src="{{ provider_icon_src }}" style="-ms-interpolation-mode: bicubic; border-radius: 00%; margin: 0; outline: none; padding: 0; text-decoration: none; width: 28px; height: 28px;" title="provider-name">
+                          </td>
+                          <!-- content -->
+                          <td valign="middle" style="border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; vertical-align: middle; width: 100%" class="content">
+                            <div style="color: #343434; font-family: helvetica; font-size: 18px; font-weight: 200;" class="headline">
+                              <p style="line-height: 120%; margin: 0em 0">{{ m.channel_name }}</p>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          {% for c in m.charts %}
+
+            <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" style="background: #fff; border-collapse: collapse; margin: 0 auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px">
+              <tbody>
+                <tr>
+                  <td style="border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding: 20px 5%; width: 600px">
+                    <table style="background: transparent; border-collapse: collapse; margin: 0 auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%">
+                      <tbody>
+                        <tr>
+                          <td align="left" style="border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; text-align: left;" class="metric-chart">
+                            <h3 style="text-align: center; font-size: 16px; font-weight: 400; margin: 0 0 10px;">{{ c.metric_name }}</h3>
+                            <table style="background: transparent; border-collapse: collapse; margin: 0 10px 0 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; border-spacing: 0; table-layout: fixed;">
+                              <tbody>
+                                <tr>
+                                  <td style="font-size: 14px; text-align: center;">
+                                    {{ c.values[0] }}
+                                  </td>
+                                  <td style="font-size: 14px; text-align: center;">
+                                    {{ c.values[1] }}
+                                  </td>
+                                  <td style="font-size: 14px; text-align: center;">
+                                    {{ c.values[2] }}
+                                  </td>
+                                  <td style="font-size: 14px; text-align: center;">
+                                    {{ c.values[3] }}
+                                  </td>
+                                  <td style="font-size: 14px; text-align: center;">
+                                    {{ c.values[4] }}
+                                  </td>
+                                  <td style="font-size: 14px; text-align: center;">
+                                    {{ c.values[5] }}
+                                  </td>
+                                  <td style="font-size: 14px; text-align: center;">
+                                    {{ c.values[6] }}
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="font-size: 12px; font-weight: 700; text-align: center;">
+                                    SAT
+                                  </td>
+                                  <td style="padding: 0; background-image: url(http://i.imgur.com/hDH6t1V.png); background-repeat: no-repeat; background-position: center;">
+                                  </td>
+                                  <td style="padding: 0; background-image: url(http://i.imgur.com/hDH6t1V.png); background-repeat: no-repeat; background-position: center;">
+                                  </td>
+                                  <td style="padding: 0; background-image: url(http://i.imgur.com/hDH6t1V.png); background-repeat: no-repeat; background-position: center;">
+                                  </td>
+                                  <td style="padding: 0; background-image: url(http://i.imgur.com/hDH6t1V.png); background-repeat: no-repeat; background-position: center;">
+                                  </td>
+                                  <td style="padding: 0; background-image: url(http://i.imgur.com/hDH6t1V.png); background-repeat: no-repeat; background-position: center;">
+                                  </td>
+                                  <td style="font-size: 12px; font-weight: 700; text-align: center;">
+                                    FRI
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          {% endfor %}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+{% endfor %}
+<!-- END METRIC SECTION -->
+
+<table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" style="background: #ffffff; border-collapse: collapse; margin: 0 auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px" class="paragraph">
+  <tbody>
+    <tr>
+      <td style="border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding: 20px 5%; width: 600px">
+        <table bgcolor="transparent" style="background: transparent; border-collapse: collapse; margin: 0 auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%">
+          <tbody>
+            <tr>
+              <td align="left" style="border-collapse: collapse; color: #2781ef; font-family: helvetica; font-size: 16px; font-weight: 200; text-align: left; width: 540px">
+                <p style="line-height: 120%; margin: 0em 0">
+                  <u>
+                    <a href="http://app.uphex.com/weekly_summaries" style="color: #317abd; text-decoration: none">See all</a>
+                  </u>
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table align="center" bgcolor="white" border="0" cellpadding="0" cellspacing="0" style="background: white; border-collapse: collapse; margin: 0 auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px" class="cta-box">
+  <tbody>
+    <tr>
+      <td bgcolor="white" style="background: white; border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200" class="section_container">
+        <div style="background: #fff; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding: 20px;" class="color_container">
+        <!-- INSERT CONTENT-->
+          <div style="background: #f7f7f7; border: 1px solid #e1e1e1; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; width: 100%">
+            <!-- headline -->
+            <div align="center" style="color: #343434; font-family: helvetica; font-size: 22px; font-weight: 200; padding: 30px 30px 10px; text-align: center">
+              <p style="line-height: 120%; margin: 0em 0">Did You Know?</p>
+            </div>
+            <!-- content -->
+            <div align="center" style="color: #787878; font-family: helvetica; font-size: 16px; font-weight: 200; padding: 20px 30px; text-align: center">
+              <p style="line-height: 120%; margin: 0em 0">You can request custom Key Performance Indicators for your business. Just click the button below to send us your request.</p>
+            </div>
+            <!-- button -->
+            <div align="center" style="font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding: 20px 30px 40px; text-align: center">
+              <a href="#" style="background: #2781ef; border-radius: 5px; color: white; padding: 10px 20px; text-decoration: none">Contact</a>
+            </div>
+          </div>
+        <!-- END CONTENT -->
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<!-- CONTENT TAG END -->
