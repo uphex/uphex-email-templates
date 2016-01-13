@@ -127,7 +127,11 @@
                             <td bgcolor="#ffffff" align="center" style="background: #fff; border-collapse: collapse; font-family: helvetica, Arial, sans-serif; font-weight: 200; width: 30%; padding-bottom: 25px; text-align: center;">
                               <div style="font-family: helvetica, Arial, sans-serif; font-weight: 200; padding: 0" class="stats_line_padding">
                               <div style="font-family: helvetica, Arial, sans-serif; font-weight: 200; padding: 0" class="metrics">
-                              <h1 style="color: #353535; font-size: 22px; font-weight: 400; line-height: 125%; margin: 0 0 5px; padding: 0">{{ d.percent_change }}%</h1>
+                              {% if d.percent_change > 0 %}
+                                <h1 style="color: #24cc6b; font-size: 22px; font-weight: 400; line-height: 125%; margin: 0 0 5px; padding: 0">{{ d.percent_change }}%</h1>
+                              {% else %}
+                                <h1 style="color: #d73333; font-size: 22px; font-weight: 400; line-height: 125%; margin: 0 0 5px; padding: 0">{{ d.percent_change }}%</h1>
+                              {% endif %}
                               <p style="color: #797979; line-height: 100%; margin: 0em 0">vs. Predicted</p>
                               </div>
                               </div>
