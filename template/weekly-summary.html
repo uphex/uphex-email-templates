@@ -25,13 +25,15 @@
 
 <!-- HIGHLIGHTS -->
 
+<!--
 <table align="center" bgcolor="white" border="0" cellpadding="0" cellspacing="0" style="background: white; border-collapse: collapse; margin: 0 auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px" class="centered-headline">
   <tbody>
     <tr>
       <td bgcolor="white" style="background: white; border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200" class="section_container">
         <div style="background: #fff; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding: 20px 5%" class="color_container">
+-->
           <!-- INSERT CONTENT -->
-
+<!--
           <table style="background-color: transparent !important; border-collapse: collapse; margin: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100% !important" class="section_table">
             <tbody>
               <tr>
@@ -47,15 +49,17 @@
               </tr>
             </tbody>
           </table>
-
+-->
           <!-- END CONTENT -->
+<!--
         </div>
       </td>
     </tr>
   </tbody>
 </table>
-
+-->
 <!-- highlights loop -->
+<!--
 <table align="center" bgcolor="white" border="0" cellpadding="0" cellspacing="0" style="background: white; border-collapse: collapse; margin: 0 auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px" class="html">
   <tbody>
     <tr>
@@ -65,14 +69,17 @@
             <tr>
               <td bgcolor="white" style="background: white; border-collapse: collapse; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding-bottom: 0px; padding-top: 0px" class="section_container">
                 <div style="background: #fff; font-family: PT san serif,Helvetica neue, helvetica, Arial,sans-serif; font-weight: 200; padding: 0px 5%" class="color_container">
+-->
                 <!-- INSERT CONTENT -->
-
+<!--
                   {% for h in event.highlights %}
+-->
                   <!-- table for all highlight rows -->
-
+<!--
                     {% for d in h[1] %}
-
+-->
                       <!-- figure out provider icon to use -->
+<!--
                       {% case d.provider_name %}
                         {% when 'facebook' %}
                           {% assign provider_icon_src = "http://i.imgur.com/aIf8HuH.png" %}
@@ -87,8 +94,10 @@
                       <table style="background-color: transparent !important; border-collapse: collapse; font-size: 14px; margin: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100% !important; table-layout: fixed" class="section_table">
                         <tbody>
                           <tr valign="top">
+-->
                             <!-- special row containing only column date -->
                             <!-- appears once for each highlight row -->
+<!--
                             <td rowspan="2" style="border-collapse: collapse; color: #343434; font-family: helvetica; font-weight: 200; padding: 0; white-space: nowrap; width: 21%;" class="wysiwyg-tmp-selected-cell">
                               {% assign current_date = h[0] | date: "%a %b %d" %}
                               {% unless current_date == past_date %}
@@ -96,24 +105,32 @@
                               {% endunless %}
                               {% assign past_date = current_date %}
                             </td>
+-->
                             <!-- column timeline -->
+<!--
                             <td rowspan="2" align="center" style="border-collapse: collapse; color: #343434; font-family: helvetica; font-weight: 200; padding: 0; width: 8%; text-align: center;">
                               <img alt="" src="http://i.imgur.com/DVYskZi.png" style="-ms-interpolation-mode: bicubic; clear: both; margin: 0; max-width: 100%; outline: none; padding: 0; text-decoration: none; width: auto">
                             </td>
-
+-->
                             <!-- column provider -->
+<!--
                             <td rowspan="2" align="right" style="border-collapse: collapse; color: #343434; font-family: helvetica; font-weight: 200; padding: 0 5px 0 10px; width: 10%">
                               <img width="16" alt="" src="{{ provider_icon_src }}" height="16" style="-ms-interpolation-mode: bicubic; clear: both; display: block; float: right; margin: 0; max-width: 100%; outline: none; padding: 0; text-decoration: none; width: auto">
                             </td>
-
+-->
                             <!-- column channel -->
+<!--
                             <td colspan="2" style="border-collapse: collapse; color: #343434; font-family: helvetica; font-weight: 200; padding: 0 0 10px; width: 60%">
                               <p style="line-height: 120%; margin: 0">{{ d.channel_name }}</p>
                             </td>
                           </tr>
+-->
                           <!-- second row -->
+<!--
                           <tr valign="top">
+-->
                             <!-- column observation -->
+<!--
                             <td bgcolor="#ffffff" align="center" style="background: #fff; border-collapse: collapse; font-family: helvetica, Arial, sans-serif; font-weight: 200; width: 30%; padding-bottom: 25px; text-align: center;">
                               <div style="font-family: helvetica, Arial, sans-serif; font-weight: 200; padding: 0" class="stats_line_padding">
                               <div style="font-family: helvetica, Arial, sans-serif; font-weight: 200; padding: 0" class="metrics">
@@ -122,8 +139,9 @@
                               </div>
                               </div>
                             </td>
-
+-->
                             <!-- column prediction -->
+<!--
                             <td bgcolor="#ffffff" align="center" style="background: #fff; border-collapse: collapse; font-family: helvetica, Arial, sans-serif; font-weight: 200; width: 30%; padding-bottom: 25px; text-align: center;">
                               <div style="font-family: helvetica, Arial, sans-serif; font-weight: 200; padding: 0" class="stats_line_padding">
                               <div style="font-family: helvetica, Arial, sans-serif; font-weight: 200; padding: 0" class="metrics">
@@ -145,8 +163,9 @@
                   {% else %}
                     Nothing surprising to report this week.
                   {% endfor %}
-
+-->
                 <!--END CONTENT-->
+<!--
                 </div>
               </td>
             </tr>
@@ -156,10 +175,11 @@
     </tr>
   </tbody>
 </table>
-
+-->
 <!-- end highlights loop -->
 
 <!-- see all -->
+<!--
 <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" style="background: #ffffff; border-collapse: collapse; margin: 0 auto; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 600px" class="paragraph">
   <tbody>
     <tr>
@@ -181,6 +201,7 @@
     </tr>
   </tbody>
 </table>
+-->
 
 <!-- KEY PERFORMANCE INDICATORS -->
 
